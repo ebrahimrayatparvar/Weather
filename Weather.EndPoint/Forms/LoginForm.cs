@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Weather.EndPoint
+namespace Weather.EndPoint.Forms
 {
-    public partial class Form1 : Form
+    public partial class LoginForm : DevExpress.XtraEditors.XtraForm
     {
-        public Form1()
+        public LoginForm()
         {
             InitializeComponent();
         }

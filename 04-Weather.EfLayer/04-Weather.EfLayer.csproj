@@ -5,4 +5,9 @@
     <RootNamespace>_04_Weather.EfLayer</RootNamespace>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\01-Weather.Core\01-Weather.Core.csproj" />
+    <ProjectReference Include="..\02-Weather.Contracts\02-Weather.Contracts.csproj" />
+  </ItemGroup>
+
 </Project>
