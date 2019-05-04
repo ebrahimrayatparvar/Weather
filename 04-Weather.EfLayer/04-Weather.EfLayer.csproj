@@ -10,4 +10,8 @@
     <ProjectReference Include="..\02-Weather.Contracts\02-Weather.Contracts.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <PackageReference Include="EntityFramework" Version="6.2.0" />
+  </ItemGroup>
+
 </Project>
