@@ -29,52 +29,162 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.formAssistant1 = new DevExpress.XtraBars.FormAssistant();
-            this.defaultLookAndFeel1 = new DevExpress.LookAndFeel.DefaultLookAndFeel(this.components);
-            this.navigationFrame1 = new DevExpress.XtraBars.Navigation.NavigationFrame();
-            this.navigationPage1 = new DevExpress.XtraBars.Navigation.NavigationPage();
-            this.navigationPage2 = new DevExpress.XtraBars.Navigation.NavigationPage();
+            this.formAssistant = new DevExpress.XtraBars.FormAssistant();
+            this.defaultLookAndFeel = new DevExpress.LookAndFeel.DefaultLookAndFeel(this.components);
+            this.navigationFrame = new DevExpress.XtraBars.Navigation.NavigationFrame();
+            this.navigationPageRegister = new DevExpress.XtraBars.Navigation.NavigationPage();
+            this.navigationPageLogin = new DevExpress.XtraBars.Navigation.NavigationPage();
+            this.txtPassword = new DevExpress.XtraEditors.TextEdit();
+            this.lblPassword = new DevExpress.XtraEditors.LabelControl();
+            this.txtUsername = new DevExpress.XtraEditors.TextEdit();
+            this.lblUsername = new DevExpress.XtraEditors.LabelControl();
+            this.btnLogin = new DevExpress.XtraEditors.SimpleButton();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
-            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
-            ((System.ComponentModel.ISupportInitialize)(this.navigationFrame1)).BeginInit();
-            this.navigationFrame1.SuspendLayout();
-            this.navigationPage2.SuspendLayout();
+            this.dxErrorProvider = new DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider(this.components);
+            this.btnRegister = new DevExpress.XtraEditors.SimpleButton();
+            this.txtFamily = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
+            this.txtName = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
+            this.btnRegisterUser = new DevExpress.XtraEditors.SimpleButton();
+            this.btnCancel = new DevExpress.XtraEditors.SimpleButton();
+            this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
+            this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
+            this.txtRegisterUsername = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
+            this.txtRegisterPassword = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
+            this.txtEmail = new DevExpress.XtraEditors.TextEdit();
+            ((System.ComponentModel.ISupportInitialize)(this.navigationFrame)).BeginInit();
+            this.navigationFrame.SuspendLayout();
+            this.navigationPageRegister.SuspendLayout();
+            this.navigationPageLogin.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtPassword.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtUsername.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dxErrorProvider)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtFamily.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtName.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
+            this.panelControl2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtRegisterUsername.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtRegisterPassword.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtEmail.Properties)).BeginInit();
             this.SuspendLayout();
             // 
-            // defaultLookAndFeel1
+            // defaultLookAndFeel
             // 
-            this.defaultLookAndFeel1.LookAndFeel.SkinName = "Visual Studio 2013 Dark";
+            this.defaultLookAndFeel.LookAndFeel.SkinName = "Visual Studio 2013 Dark";
             // 
-            // navigationFrame1
+            // navigationFrame
             // 
-            this.navigationFrame1.Controls.Add(this.navigationPage1);
-            this.navigationFrame1.Controls.Add(this.navigationPage2);
-            this.navigationFrame1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.navigationFrame1.Location = new System.Drawing.Point(0, 0);
-            this.navigationFrame1.Name = "navigationFrame1";
-            this.navigationFrame1.Pages.AddRange(new DevExpress.XtraBars.Navigation.NavigationPageBase[] {
-            this.navigationPage1,
-            this.navigationPage2});
-            this.navigationFrame1.SelectedPage = this.navigationPage2;
-            this.navigationFrame1.Size = new System.Drawing.Size(436, 440);
-            this.navigationFrame1.TabIndex = 0;
-            this.navigationFrame1.Text = "navigationFrame1";
+            this.navigationFrame.Controls.Add(this.navigationPageRegister);
+            this.navigationFrame.Controls.Add(this.navigationPageLogin);
+            this.navigationFrame.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.navigationFrame.Location = new System.Drawing.Point(0, 0);
+            this.navigationFrame.Name = "navigationFrame";
+            this.navigationFrame.Pages.AddRange(new DevExpress.XtraBars.Navigation.NavigationPageBase[] {
+            this.navigationPageRegister,
+            this.navigationPageLogin});
+            this.navigationFrame.SelectedPage = this.navigationPageLogin;
+            this.navigationFrame.Size = new System.Drawing.Size(436, 440);
+            this.navigationFrame.TabIndex = 0;
+            this.navigationFrame.Text = "navigationFrame1";
             // 
-            // navigationPage1
+            // navigationPageRegister
             // 
-            this.navigationPage1.Caption = "navigationPage1";
-            this.navigationPage1.Name = "navigationPage1";
-            this.navigationPage1.Size = new System.Drawing.Size(436, 440);
+            this.navigationPageRegister.Controls.Add(this.txtEmail);
+            this.navigationPageRegister.Controls.Add(this.labelControl7);
+            this.navigationPageRegister.Controls.Add(this.txtRegisterPassword);
+            this.navigationPageRegister.Controls.Add(this.labelControl6);
+            this.navigationPageRegister.Controls.Add(this.txtFamily);
+            this.navigationPageRegister.Controls.Add(this.txtRegisterUsername);
+            this.navigationPageRegister.Controls.Add(this.labelControl2);
+            this.navigationPageRegister.Controls.Add(this.labelControl5);
+            this.navigationPageRegister.Controls.Add(this.txtName);
+            this.navigationPageRegister.Controls.Add(this.labelControl3);
+            this.navigationPageRegister.Controls.Add(this.btnRegisterUser);
+            this.navigationPageRegister.Controls.Add(this.btnCancel);
+            this.navigationPageRegister.Controls.Add(this.panelControl2);
+            this.navigationPageRegister.Name = "navigationPageRegister";
+            this.navigationPageRegister.Size = new System.Drawing.Size(436, 440);
             // 
-            // navigationPage2
+            // navigationPageLogin
             // 
-            this.navigationPage2.Controls.Add(this.simpleButton1);
-            this.navigationPage2.Controls.Add(this.panelControl1);
-            this.navigationPage2.Name = "navigationPage2";
-            this.navigationPage2.Size = new System.Drawing.Size(436, 440);
+            this.navigationPageLogin.Controls.Add(this.txtPassword);
+            this.navigationPageLogin.Controls.Add(this.lblPassword);
+            this.navigationPageLogin.Controls.Add(this.txtUsername);
+            this.navigationPageLogin.Controls.Add(this.lblUsername);
+            this.navigationPageLogin.Controls.Add(this.btnRegister);
+            this.navigationPageLogin.Controls.Add(this.btnLogin);
+            this.navigationPageLogin.Controls.Add(this.panelControl1);
+            this.navigationPageLogin.Name = "navigationPageLogin";
+            this.navigationPageLogin.Size = new System.Drawing.Size(436, 440);
+            // 
+            // txtPassword
+            // 
+            this.txtPassword.EditValue = "";
+            this.txtPassword.Location = new System.Drawing.Point(53, 205);
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.Parmida_ActivePlusMultiKeys = false;
+            this.txtPassword.Properties.Appearance.Font = new System.Drawing.Font("B Nazanin", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.txtPassword.Properties.Appearance.Options.UseFont = true;
+            this.txtPassword.Size = new System.Drawing.Size(269, 36);
+            this.txtPassword.TabIndex = 2;
+            // 
+            // lblPassword
+            // 
+            this.lblPassword.Appearance.Font = new System.Drawing.Font("B Nazanin", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.lblPassword.Appearance.ForeColor = System.Drawing.Color.White;
+            this.lblPassword.Location = new System.Drawing.Point(347, 206);
+            this.lblPassword.Name = "lblPassword";
+            this.lblPassword.Size = new System.Drawing.Size(61, 33);
+            this.lblPassword.TabIndex = 1;
+            this.lblPassword.Text = "گذر واژه";
+            // 
+            // txtUsername
+            // 
+            this.txtUsername.EditValue = "";
+            this.txtUsername.Location = new System.Drawing.Point(53, 163);
+            this.txtUsername.Name = "txtUsername";
+            this.txtUsername.Parmida_ActivePlusMultiKeys = false;
+            this.txtUsername.Properties.Appearance.Font = new System.Drawing.Font("B Nazanin", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.txtUsername.Properties.Appearance.Options.UseFont = true;
+            this.txtUsername.Size = new System.Drawing.Size(269, 36);
+            this.txtUsername.TabIndex = 2;
+            // 
+            // lblUsername
+            // 
+            this.lblUsername.Appearance.Font = new System.Drawing.Font("B Nazanin", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.lblUsername.Appearance.ForeColor = System.Drawing.Color.White;
+            this.lblUsername.Location = new System.Drawing.Point(347, 164);
+            this.lblUsername.Name = "lblUsername";
+            this.lblUsername.Size = new System.Drawing.Size(61, 33);
+            this.lblUsername.TabIndex = 1;
+            this.lblUsername.Text = "نام کاربر";
+            // 
+            // btnLogin
+            // 
+            this.btnLogin.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96)))));
+            this.btnLogin.Appearance.Font = new System.Drawing.Font("B Titr", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.btnLogin.Appearance.ForeColor = System.Drawing.Color.White;
+            this.btnLogin.Appearance.Options.UseBackColor = true;
+            this.btnLogin.Appearance.Options.UseFont = true;
+            this.btnLogin.Appearance.Options.UseForeColor = true;
+            this.btnLogin.AppearanceHovered.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(232)))), ((int)(((byte)(129)))));
+            this.btnLogin.AppearanceHovered.Options.UseBackColor = true;
+            this.btnLogin.AppearancePressed.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(232)))), ((int)(((byte)(129)))));
+            this.btnLogin.AppearancePressed.Options.UseBackColor = true;
+            this.btnLogin.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.btnLogin.Location = new System.Drawing.Point(53, 263);
+            this.btnLogin.Name = "btnLogin";
+            this.btnLogin.Size = new System.Drawing.Size(269, 40);
+            this.btnLogin.TabIndex = 1;
+            this.btnLogin.Text = "ورود";
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
             // panelControl1
             // 
@@ -91,63 +201,269 @@
             // 
             this.labelControl1.Appearance.Font = new System.Drawing.Font("B Titr", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.labelControl1.Appearance.ForeColor = System.Drawing.Color.White;
-            this.labelControl1.Location = new System.Drawing.Point(195, 3);
+            this.labelControl1.Location = new System.Drawing.Point(159, 4);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(41, 42);
+            this.labelControl1.Size = new System.Drawing.Size(118, 42);
             this.labelControl1.TabIndex = 0;
-            this.labelControl1.Text = "ورود";
+            this.labelControl1.Text = "ورود به برنامه";
             // 
-            // simpleButton1
+            // dxErrorProvider
             // 
-            this.simpleButton1.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96)))));
-            this.simpleButton1.Appearance.Font = new System.Drawing.Font("B Titr", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.simpleButton1.Appearance.ForeColor = System.Drawing.Color.White;
-            this.simpleButton1.Appearance.Options.UseBackColor = true;
-            this.simpleButton1.Appearance.Options.UseFont = true;
-            this.simpleButton1.Appearance.Options.UseForeColor = true;
-            this.simpleButton1.AppearanceHovered.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(232)))), ((int)(((byte)(129)))));
-            this.simpleButton1.AppearanceHovered.Options.UseBackColor = true;
-            this.simpleButton1.AppearancePressed.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(232)))), ((int)(((byte)(129)))));
-            this.simpleButton1.AppearancePressed.Options.UseBackColor = true;
-            this.simpleButton1.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.simpleButton1.Location = new System.Drawing.Point(34, 353);
-            this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.Size = new System.Drawing.Size(112, 40);
-            this.simpleButton1.TabIndex = 1;
-            this.simpleButton1.Text = "ورود";
+            this.dxErrorProvider.ContainerControl = this;
+            // 
+            // btnRegister
+            // 
+            this.btnRegister.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(152)))), ((int)(((byte)(219)))));
+            this.btnRegister.Appearance.Font = new System.Drawing.Font("B Titr", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.btnRegister.Appearance.ForeColor = System.Drawing.Color.White;
+            this.btnRegister.Appearance.Options.UseBackColor = true;
+            this.btnRegister.Appearance.Options.UseFont = true;
+            this.btnRegister.Appearance.Options.UseForeColor = true;
+            this.btnRegister.AppearanceHovered.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(232)))), ((int)(((byte)(129)))));
+            this.btnRegister.AppearanceHovered.Options.UseBackColor = true;
+            this.btnRegister.AppearancePressed.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(232)))), ((int)(((byte)(129)))));
+            this.btnRegister.AppearancePressed.Options.UseBackColor = true;
+            this.btnRegister.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.btnRegister.Location = new System.Drawing.Point(53, 309);
+            this.btnRegister.Name = "btnRegister";
+            this.btnRegister.Size = new System.Drawing.Size(269, 40);
+            this.btnRegister.TabIndex = 1;
+            this.btnRegister.Text = "ثبت نام";
+            this.btnRegister.Click += new System.EventHandler(this.btnRegister_Click);
+            // 
+            // txtFamily
+            // 
+            this.txtFamily.EditValue = "";
+            this.txtFamily.Location = new System.Drawing.Point(34, 144);
+            this.txtFamily.Name = "txtFamily";
+            this.txtFamily.Parmida_ActivePlusMultiKeys = false;
+            this.txtFamily.Properties.Appearance.Font = new System.Drawing.Font("B Nazanin", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.txtFamily.Properties.Appearance.Options.UseFont = true;
+            this.txtFamily.Size = new System.Drawing.Size(269, 36);
+            this.txtFamily.TabIndex = 8;
+            // 
+            // labelControl2
+            // 
+            this.labelControl2.Appearance.Font = new System.Drawing.Font("B Nazanin", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.labelControl2.Appearance.ForeColor = System.Drawing.Color.White;
+            this.labelControl2.Location = new System.Drawing.Point(312, 145);
+            this.labelControl2.Name = "labelControl2";
+            this.labelControl2.Size = new System.Drawing.Size(91, 33);
+            this.labelControl2.TabIndex = 4;
+            this.labelControl2.Text = "نام خانوادگی";
+            // 
+            // txtName
+            // 
+            this.txtName.EditValue = "";
+            this.txtName.Location = new System.Drawing.Point(34, 102);
+            this.txtName.Name = "txtName";
+            this.txtName.Parmida_ActivePlusMultiKeys = false;
+            this.txtName.Properties.Appearance.Font = new System.Drawing.Font("B Nazanin", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.txtName.Properties.Appearance.Options.UseFont = true;
+            this.txtName.Size = new System.Drawing.Size(269, 36);
+            this.txtName.TabIndex = 9;
+            // 
+            // labelControl3
+            // 
+            this.labelControl3.Appearance.Font = new System.Drawing.Font("B Nazanin", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.labelControl3.Appearance.ForeColor = System.Drawing.Color.White;
+            this.labelControl3.Location = new System.Drawing.Point(383, 105);
+            this.labelControl3.Name = "labelControl3";
+            this.labelControl3.Size = new System.Drawing.Size(20, 33);
+            this.labelControl3.TabIndex = 5;
+            this.labelControl3.Text = "نام";
+            // 
+            // btnRegisterUser
+            // 
+            this.btnRegisterUser.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(152)))), ((int)(((byte)(219)))));
+            this.btnRegisterUser.Appearance.Font = new System.Drawing.Font("B Titr", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.btnRegisterUser.Appearance.ForeColor = System.Drawing.Color.White;
+            this.btnRegisterUser.Appearance.Options.UseBackColor = true;
+            this.btnRegisterUser.Appearance.Options.UseFont = true;
+            this.btnRegisterUser.Appearance.Options.UseForeColor = true;
+            this.btnRegisterUser.AppearanceHovered.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(232)))), ((int)(((byte)(129)))));
+            this.btnRegisterUser.AppearanceHovered.Options.UseBackColor = true;
+            this.btnRegisterUser.AppearancePressed.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(232)))), ((int)(((byte)(129)))));
+            this.btnRegisterUser.AppearancePressed.Options.UseBackColor = true;
+            this.btnRegisterUser.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.btnRegisterUser.Location = new System.Drawing.Point(34, 322);
+            this.btnRegisterUser.Name = "btnRegisterUser";
+            this.btnRegisterUser.Size = new System.Drawing.Size(269, 40);
+            this.btnRegisterUser.TabIndex = 6;
+            this.btnRegisterUser.Text = "ثبت نام";
+            this.btnRegisterUser.Click += new System.EventHandler(this.btnRegisterUser_Click);
+            // 
+            // btnCancel
+            // 
+            this.btnCancel.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(128)))), ((int)(((byte)(147)))));
+            this.btnCancel.Appearance.Font = new System.Drawing.Font("B Titr", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.btnCancel.Appearance.ForeColor = System.Drawing.Color.White;
+            this.btnCancel.Appearance.Options.UseBackColor = true;
+            this.btnCancel.Appearance.Options.UseFont = true;
+            this.btnCancel.Appearance.Options.UseForeColor = true;
+            this.btnCancel.AppearanceHovered.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(232)))), ((int)(((byte)(129)))));
+            this.btnCancel.AppearanceHovered.Options.UseBackColor = true;
+            this.btnCancel.AppearancePressed.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(232)))), ((int)(((byte)(129)))));
+            this.btnCancel.AppearancePressed.Options.UseBackColor = true;
+            this.btnCancel.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.btnCancel.Location = new System.Drawing.Point(34, 368);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(269, 40);
+            this.btnCancel.TabIndex = 7;
+            this.btnCancel.Text = "انصراف";
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            // 
+            // panelControl2
+            // 
+            this.panelControl2.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96)))));
+            this.panelControl2.Appearance.Options.UseBackColor = true;
+            this.panelControl2.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.panelControl2.Controls.Add(this.labelControl4);
+            this.panelControl2.Location = new System.Drawing.Point(3, 22);
+            this.panelControl2.Name = "panelControl2";
+            this.panelControl2.Size = new System.Drawing.Size(436, 56);
+            this.panelControl2.TabIndex = 3;
+            // 
+            // labelControl4
+            // 
+            this.labelControl4.Appearance.Font = new System.Drawing.Font("B Titr", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.labelControl4.Appearance.ForeColor = System.Drawing.Color.White;
+            this.labelControl4.Location = new System.Drawing.Point(183, 3);
+            this.labelControl4.Name = "labelControl4";
+            this.labelControl4.Size = new System.Drawing.Size(62, 42);
+            this.labelControl4.TabIndex = 0;
+            this.labelControl4.Text = "ثبت نام";
+            // 
+            // labelControl5
+            // 
+            this.labelControl5.Appearance.Font = new System.Drawing.Font("B Nazanin", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.labelControl5.Appearance.ForeColor = System.Drawing.Color.White;
+            this.labelControl5.Location = new System.Drawing.Point(328, 184);
+            this.labelControl5.Name = "labelControl5";
+            this.labelControl5.Size = new System.Drawing.Size(75, 33);
+            this.labelControl5.TabIndex = 5;
+            this.labelControl5.Text = "نام کاربری";
+            // 
+            // txtRegisterUsername
+            // 
+            this.txtRegisterUsername.EditValue = "";
+            this.txtRegisterUsername.Location = new System.Drawing.Point(34, 183);
+            this.txtRegisterUsername.Name = "txtRegisterUsername";
+            this.txtRegisterUsername.Parmida_ActivePlusMultiKeys = false;
+            this.txtRegisterUsername.Properties.Appearance.Font = new System.Drawing.Font("B Nazanin", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.txtRegisterUsername.Properties.Appearance.Options.UseFont = true;
+            this.txtRegisterUsername.Size = new System.Drawing.Size(269, 36);
+            this.txtRegisterUsername.TabIndex = 9;
+            // 
+            // labelControl6
+            // 
+            this.labelControl6.Appearance.Font = new System.Drawing.Font("B Nazanin", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.labelControl6.Appearance.ForeColor = System.Drawing.Color.White;
+            this.labelControl6.Location = new System.Drawing.Point(342, 226);
+            this.labelControl6.Name = "labelControl6";
+            this.labelControl6.Size = new System.Drawing.Size(61, 33);
+            this.labelControl6.TabIndex = 4;
+            this.labelControl6.Text = "گذر واژه";
+            // 
+            // txtRegisterPassword
+            // 
+            this.txtRegisterPassword.EditValue = "";
+            this.txtRegisterPassword.Location = new System.Drawing.Point(34, 225);
+            this.txtRegisterPassword.Name = "txtRegisterPassword";
+            this.txtRegisterPassword.Parmida_ActivePlusMultiKeys = false;
+            this.txtRegisterPassword.Properties.Appearance.Font = new System.Drawing.Font("B Nazanin", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.txtRegisterPassword.Properties.Appearance.Options.UseFont = true;
+            this.txtRegisterPassword.Size = new System.Drawing.Size(269, 36);
+            this.txtRegisterPassword.TabIndex = 8;
+            // 
+            // labelControl7
+            // 
+            this.labelControl7.Appearance.Font = new System.Drawing.Font("B Nazanin", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.labelControl7.Appearance.ForeColor = System.Drawing.Color.White;
+            this.labelControl7.Location = new System.Drawing.Point(364, 268);
+            this.labelControl7.Name = "labelControl7";
+            this.labelControl7.Size = new System.Drawing.Size(39, 33);
+            this.labelControl7.TabIndex = 4;
+            this.labelControl7.Text = "ایمیل";
+            // 
+            // txtEmail
+            // 
+            this.txtEmail.EditValue = "";
+            this.txtEmail.Location = new System.Drawing.Point(34, 267);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Parmida_ActivePlusMultiKeys = false;
+            this.txtEmail.Properties.Appearance.Font = new System.Drawing.Font("B Nazanin", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.txtEmail.Properties.Appearance.Options.UseFont = true;
+            this.txtEmail.Size = new System.Drawing.Size(269, 36);
+            this.txtEmail.TabIndex = 8;
             // 
             // LoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(436, 440);
-            this.Controls.Add(this.navigationFrame1);
+            this.Controls.Add(this.navigationFrame);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "LoginForm";
+            this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            ((System.ComponentModel.ISupportInitialize)(this.navigationFrame1)).EndInit();
-            this.navigationFrame1.ResumeLayout(false);
-            this.navigationPage2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.navigationFrame)).EndInit();
+            this.navigationFrame.ResumeLayout(false);
+            this.navigationPageRegister.ResumeLayout(false);
+            this.navigationPageRegister.PerformLayout();
+            this.navigationPageLogin.ResumeLayout(false);
+            this.navigationPageLogin.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtPassword.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtUsername.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);
             this.panelControl1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dxErrorProvider)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtFamily.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtName.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).EndInit();
+            this.panelControl2.ResumeLayout(false);
+            this.panelControl2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtRegisterUsername.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtRegisterPassword.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtEmail.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private DevExpress.XtraBars.FormAssistant formAssistant1;
-        private DevExpress.LookAndFeel.DefaultLookAndFeel defaultLookAndFeel1;
-        private DevExpress.XtraBars.Navigation.NavigationFrame navigationFrame1;
-        private DevExpress.XtraBars.Navigation.NavigationPage navigationPage1;
-        private DevExpress.XtraBars.Navigation.NavigationPage navigationPage2;
+        private DevExpress.XtraBars.FormAssistant formAssistant;
+        private DevExpress.LookAndFeel.DefaultLookAndFeel defaultLookAndFeel;
+        private DevExpress.XtraBars.Navigation.NavigationFrame navigationFrame;
+        private DevExpress.XtraBars.Navigation.NavigationPage navigationPageRegister;
+        private DevExpress.XtraBars.Navigation.NavigationPage navigationPageLogin;
         private DevExpress.XtraEditors.PanelControl panelControl1;
         private DevExpress.XtraEditors.LabelControl labelControl1;
-        private DevExpress.XtraEditors.SimpleButton simpleButton1;
+        private DevExpress.XtraEditors.SimpleButton btnLogin;
+        private DevExpress.XtraEditors.TextEdit txtPassword;
+        private DevExpress.XtraEditors.LabelControl lblPassword;
+        private DevExpress.XtraEditors.TextEdit txtUsername;
+        private DevExpress.XtraEditors.LabelControl lblUsername;
+        private DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider dxErrorProvider;
+        private DevExpress.XtraEditors.SimpleButton btnRegister;
+        private DevExpress.XtraEditors.TextEdit txtFamily;
+        private DevExpress.XtraEditors.LabelControl labelControl2;
+        private DevExpress.XtraEditors.TextEdit txtName;
+        private DevExpress.XtraEditors.LabelControl labelControl3;
+        private DevExpress.XtraEditors.SimpleButton btnRegisterUser;
+        private DevExpress.XtraEditors.SimpleButton btnCancel;
+        private DevExpress.XtraEditors.PanelControl panelControl2;
+        private DevExpress.XtraEditors.LabelControl labelControl4;
+        private DevExpress.XtraEditors.TextEdit txtEmail;
+        private DevExpress.XtraEditors.LabelControl labelControl7;
+        private DevExpress.XtraEditors.TextEdit txtRegisterPassword;
+        private DevExpress.XtraEditors.LabelControl labelControl6;
+        private DevExpress.XtraEditors.TextEdit txtRegisterUsername;
+        private DevExpress.XtraEditors.LabelControl labelControl5;
     }
 }
 
