@@ -115,6 +115,7 @@
             // txtEmail
             // 
             this.txtEmail.EditValue = "";
+            this.txtEmail.EnterMoveNextControl = true;
             this.txtEmail.Location = new System.Drawing.Point(34, 267);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Parmida_ActivePlusMultiKeys = false;
@@ -129,7 +130,7 @@
             this.txtEmail.Properties.AppearanceReadOnly.Options.UseTextOptions = true;
             this.txtEmail.Properties.AppearanceReadOnly.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.txtEmail.Size = new System.Drawing.Size(269, 36);
-            this.txtEmail.TabIndex = 8;
+            this.txtEmail.TabIndex = 13;
             // 
             // labelControl7
             // 
@@ -144,6 +145,7 @@
             // txtRegisterPassword
             // 
             this.txtRegisterPassword.EditValue = "";
+            this.txtRegisterPassword.EnterMoveNextControl = true;
             this.txtRegisterPassword.Location = new System.Drawing.Point(34, 225);
             this.txtRegisterPassword.Name = "txtRegisterPassword";
             this.txtRegisterPassword.Parmida_ActivePlusMultiKeys = false;
@@ -159,7 +161,7 @@
             this.txtRegisterPassword.Properties.AppearanceReadOnly.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.txtRegisterPassword.Properties.PasswordChar = '*';
             this.txtRegisterPassword.Size = new System.Drawing.Size(269, 36);
-            this.txtRegisterPassword.TabIndex = 8;
+            this.txtRegisterPassword.TabIndex = 12;
             // 
             // labelControl6
             // 
@@ -174,6 +176,7 @@
             // txtFamily
             // 
             this.txtFamily.EditValue = "";
+            this.txtFamily.EnterMoveNextControl = true;
             this.txtFamily.Location = new System.Drawing.Point(34, 144);
             this.txtFamily.Name = "txtFamily";
             this.txtFamily.Parmida_ActivePlusMultiKeys = false;
@@ -188,11 +191,12 @@
             this.txtFamily.Properties.AppearanceReadOnly.Options.UseTextOptions = true;
             this.txtFamily.Properties.AppearanceReadOnly.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.txtFamily.Size = new System.Drawing.Size(269, 36);
-            this.txtFamily.TabIndex = 8;
+            this.txtFamily.TabIndex = 10;
             // 
             // txtRegisterUsername
             // 
             this.txtRegisterUsername.EditValue = "";
+            this.txtRegisterUsername.EnterMoveNextControl = true;
             this.txtRegisterUsername.Location = new System.Drawing.Point(34, 183);
             this.txtRegisterUsername.Name = "txtRegisterUsername";
             this.txtRegisterUsername.Parmida_ActivePlusMultiKeys = false;
@@ -207,7 +211,7 @@
             this.txtRegisterUsername.Properties.AppearanceReadOnly.Options.UseTextOptions = true;
             this.txtRegisterUsername.Properties.AppearanceReadOnly.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.txtRegisterUsername.Size = new System.Drawing.Size(269, 36);
-            this.txtRegisterUsername.TabIndex = 9;
+            this.txtRegisterUsername.TabIndex = 11;
             // 
             // labelControl2
             // 
@@ -232,6 +236,7 @@
             // txtName
             // 
             this.txtName.EditValue = "";
+            this.txtName.EnterMoveNextControl = true;
             this.txtName.Location = new System.Drawing.Point(34, 102);
             this.txtName.Name = "txtName";
             this.txtName.Parmida_ActivePlusMultiKeys = false;
@@ -274,7 +279,7 @@
             this.btnRegisterUser.Location = new System.Drawing.Point(34, 322);
             this.btnRegisterUser.Name = "btnRegisterUser";
             this.btnRegisterUser.Size = new System.Drawing.Size(269, 40);
-            this.btnRegisterUser.TabIndex = 6;
+            this.btnRegisterUser.TabIndex = 14;
             this.btnRegisterUser.Text = "ثبت نام";
             this.btnRegisterUser.Click += new System.EventHandler(this.btnRegisterUser_Click);
             // 
@@ -294,7 +299,7 @@
             this.btnCancel.Location = new System.Drawing.Point(34, 368);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(269, 40);
-            this.btnCancel.TabIndex = 7;
+            this.btnCancel.TabIndex = 15;
             this.btnCancel.Text = "انصراف";
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
@@ -334,6 +339,7 @@
             // txtPassword
             // 
             this.txtPassword.EditValue = "";
+            this.txtPassword.EnterMoveNextControl = true;
             this.txtPassword.Location = new System.Drawing.Point(53, 205);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Parmida_ActivePlusMultiKeys = false;
@@ -364,6 +370,7 @@
             // txtUsername
             // 
             this.txtUsername.EditValue = "";
+            this.txtUsername.EnterMoveNextControl = true;
             this.txtUsername.Location = new System.Drawing.Point(53, 163);
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Parmida_ActivePlusMultiKeys = false;
@@ -378,7 +385,7 @@
             this.txtUsername.Properties.AppearanceReadOnly.Options.UseTextOptions = true;
             this.txtUsername.Properties.AppearanceReadOnly.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.txtUsername.Size = new System.Drawing.Size(269, 36);
-            this.txtUsername.TabIndex = 2;
+            this.txtUsername.TabIndex = 1;
             // 
             // lblUsername
             // 
@@ -406,7 +413,7 @@
             this.btnRegister.Location = new System.Drawing.Point(53, 309);
             this.btnRegister.Name = "btnRegister";
             this.btnRegister.Size = new System.Drawing.Size(269, 40);
-            this.btnRegister.TabIndex = 1;
+            this.btnRegister.TabIndex = 4;
             this.btnRegister.Text = "ثبت نام";
             this.btnRegister.Click += new System.EventHandler(this.btnRegister_Click);
             // 
@@ -426,7 +433,7 @@
             this.btnLogin.Location = new System.Drawing.Point(53, 263);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(269, 40);
-            this.btnLogin.TabIndex = 1;
+            this.btnLogin.TabIndex = 3;
             this.btnLogin.Text = "ورود";
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 

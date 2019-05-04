@@ -72,9 +72,11 @@ namespace Weather.EndPoint.Forms
 
         private void btnRegisterUser_Click(object sender, EventArgs e)
         {
+            var bl = false;
             if (string.IsNullOrWhiteSpace(txtName.Text))
             {
                 dxErrorProvider.SetError(txtName, "وارد نمودن نام الزامی می باشد.");
+                bl = true;
             }
             else
             {
@@ -84,6 +86,7 @@ namespace Weather.EndPoint.Forms
             if (string.IsNullOrWhiteSpace(txtFamily.Text))
             {
                 dxErrorProvider.SetError(txtFamily, "وارد نمودن نام خانوادگی الزامی می باشد.");
+                bl = true;
             }
             else
             {
@@ -93,6 +96,7 @@ namespace Weather.EndPoint.Forms
             if (string.IsNullOrWhiteSpace(txtRegisterUsername.Text))
             {
                 dxErrorProvider.SetError(txtRegisterUsername, "وارد نمودن نام کاربری الزامی می باشد.");
+                bl = true;
             }
             else
             {
@@ -102,6 +106,7 @@ namespace Weather.EndPoint.Forms
             if (string.IsNullOrWhiteSpace(txtRegisterPassword.Text))
             {
                 dxErrorProvider.SetError(txtRegisterPassword, "وارد نمودن گذر واژه الزامی می باشد.");
+                bl = true;
             }
             else
             {
@@ -111,11 +116,29 @@ namespace Weather.EndPoint.Forms
             if (string.IsNullOrWhiteSpace(txtEmail.Text))
             {
                 dxErrorProvider.SetError(txtEmail, "وارد نمودن ایمیل الزامی می باشد.");
+                bl = true;
             }
             else
             {
                 dxErrorProvider.SetError(txtEmail, null);
             }
+
+
+            if (bl) return;
+
+            var obj = new UserEntity
+            {
+                Name=txtName.Text,
+                family=txtFamily.Text,
+                Username = txtUsername.Text,
+                Password = txtPassword.Text,
+                Email=txtEmail.Text
+            };
+
+            var q = _obj.Register(obj);
+            XtraMessageBox.Show("کاربر جدید به درستی درج شد.", "درج با موفقیت",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+            navigationFrame.SelectedPage = navigationPageLogin;
         }
 
         private void btnCancel_Click(object sender, EventArgs e)

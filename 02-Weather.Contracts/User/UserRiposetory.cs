@@ -7,7 +7,7 @@ namespace _02_Weather.Contracts.User
 {
     public interface UserRiposetory
     {
-        void Register(UserEntity obj);
+        UserEntity Register(UserEntity obj);
         void ChanghePassword(UserEntity obj);
         bool IsUser(UserEntity obj);
     }

@@ -26,10 +26,11 @@ namespace EfRipositpry.User
             return c >= 1;
         }
 
-        public void Register(UserEntity obj)
+        public UserEntity Register(UserEntity obj)
         {
-            _db.Users.Add(obj);
+            var result = _db.Users.Add(obj);
             _db.SaveChanges();
+            return result;
         }
     }
 }
