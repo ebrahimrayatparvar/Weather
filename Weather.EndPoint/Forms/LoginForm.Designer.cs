@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginForm));
             this.formAssistant = new DevExpress.XtraBars.FormAssistant();
             this.defaultLookAndFeel = new DevExpress.LookAndFeel.DefaultLookAndFeel(this.components);
             this.navigationFrame = new DevExpress.XtraBars.Navigation.NavigationFrame();
@@ -96,6 +97,7 @@
             // 
             // navigationPageRegister
             // 
+            this.navigationPageRegister.Caption = "navigationPageRegister";
             this.navigationPageRegister.Controls.Add(this.txtEmail);
             this.navigationPageRegister.Controls.Add(this.labelControl7);
             this.navigationPageRegister.Controls.Add(this.txtRegisterPassword);
@@ -469,6 +471,7 @@
             this.ClientSize = new System.Drawing.Size(436, 440);
             this.Controls.Add(this.navigationFrame);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "LoginForm";

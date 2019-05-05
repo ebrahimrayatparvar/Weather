@@ -1,0 +1,50 @@
+﻿[
+  {
+    "Name": "Tehran,IR",
+    "Persion": "تهران"
+  },
+  {
+    "Name": "Mashhad,IR",
+    "Persion": "مشهد"
+  },
+  {
+    "Name": "Tabriz,IR",
+    "Persion": "تبریز"
+  },
+  {
+    "Name": "Shiraz,IR",
+    "Persion": "شیراز"
+  },
+  {
+    "Name": "Babol,IR",
+    "Persion": "بابل - قائمشهر"
+  },
+  {
+    "Name": "Amol,IR",
+    "Persion": "آمل"
+  },
+  {
+    "Name": "Neka,IR",
+    "Persion": "نکا"
+  },
+  //{
+  //  "Name": "ŢāleshMaḩalleh,IR",
+  //  "Persion": "رامسر"
+  //},
+  {
+    "Name": "Shari-i-Tajan,IR",
+    "Persion": "ساری"
+  },
+  {
+    "Name": "Babolsar,IR",
+    "Persion": "بابلسر"
+  },
+  {
+    "Name": "Tonekabon,IR",
+    "Persion": "تنکابن"
+  },
+  {
+    "Name": "Behshahr,IR",
+    "Persion": "بهشهر"
+  }
+]

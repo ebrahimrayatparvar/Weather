@@ -19,6 +19,8 @@ namespace EfRipositpry.User
             throw new NotImplementedException();
         }
 
+        public List<UserEntity> GetUserInformation(string userName) => _db.Users.Where(q => q.Username.Equals(userName)).ToList();
+
         public bool IsUser(UserEntity obj)
         {
             var c = _db.Users.Where(q => q.Username.Equals(obj.Username) &&
@@ -26,11 +28,15 @@ namespace EfRipositpry.User
             return c >= 1;
         }
 
-        public UserEntity Register(UserEntity obj)
+        public bool Register(UserEntity obj)
         {
-            var result = _db.Users.Add(obj);
-            _db.SaveChanges();
-            return result;
+            if (!_db.Users.Any(q => q.Username.Equals(obj.Username)))
+            {
+                var result = _db.Users.Add(obj);
+                _db.SaveChanges();
+                return true;
+            }
+            return false;
         }
     }
 }

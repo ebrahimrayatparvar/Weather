@@ -2,18 +2,11 @@
 using DevExpress.XtraEditors;
 using EfRipositpry.User;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Weather.EndPoint.Forms
 {
-    public partial class LoginForm : DevExpress.XtraEditors.XtraForm
+    public partial class LoginForm : XtraForm
     {
         public LoginForm()
         {
@@ -56,6 +49,8 @@ namespace Weather.EndPoint.Forms
             {
                 this.Hide();
                 var frm = new MainForm();
+                Properties.Settings.Default.UserName = obj.Username;
+                Properties.Settings.Default.Save();
                 frm.ShowDialog();
                 this.Close();
             }
@@ -128,14 +123,19 @@ namespace Weather.EndPoint.Forms
 
             var obj = new UserEntity
             {
-                Name=txtName.Text,
-                family=txtFamily.Text,
-                Username = txtUsername.Text,
-                Password = txtPassword.Text,
-                Email=txtEmail.Text
+                Name = txtName.Text,
+                family = txtFamily.Text,
+                Username = txtRegisterUsername.Text,
+                Password = txtRegisterPassword.Text,
+                Email = txtEmail.Text
             };
 
-            var q = _obj.Register(obj);
+            if (!_obj.Register(obj))
+            {
+                XtraMessageBox.Show("چنین نام کاربری ای قبلا در برنامه درج شده است..", "خطا در برنامه",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
             XtraMessageBox.Show("کاربر جدید به درستی درج شد.", "درج با موفقیت",
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
             navigationFrame.SelectedPage = navigationPageLogin;
