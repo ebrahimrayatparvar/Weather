@@ -1,4 +1,5 @@
-﻿using DevExpress.XtraEditors;
+﻿using _01_Weather.Core.User;
+using DevExpress.XtraEditors;
 using EfRipositpry.User;
 using System;
 using System.Collections.Generic;
@@ -39,7 +40,7 @@ namespace Weather.EndPoint.Forms
                     txtFavoritesCity.Text = item.FavoritesCity;
                     txtCommand.Text = item.Command;
                 }
-                
+
 
             }
             catch (SqlException ex)
@@ -54,6 +55,33 @@ namespace Weather.EndPoint.Forms
 
         private void btnSave_Click(object sender, EventArgs e)
         {
+            try
+            {
+                var userInfo = new UserEntity
+                {
+                    Name = txtName.Text,
+                    family = txtFamily.Text,
+                    Username = txtUserName.Text,
+                    Password = txtPassword.Text,
+                    Bod = DateTime.Parse(ComboDob.EditValue.ToString()),
+                    BodPersion = ComboDob.Text,
+                    Email = txtEmail.Text,
+                    Mobile = txtMobile.Text,
+                    Command = txtCommand.Text,
+                    FavoritesCity = txtFavoritesCity.Text,
+                    UserId = id
+                };
+
+                _db.Edit(userInfo);
+                XtraMessageBox.Show("ویرایش کاربر با موفقیت انجام شد.", "ویرایش موفق",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+                Close();
+            }
+            catch (Exception ex)
+            {
+                XtraMessageBox.Show(ex.Message, "خطا در برنامه",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
 
         }
 
@@ -68,7 +96,7 @@ namespace Weather.EndPoint.Forms
             {
                 e.Handled = true;
             }
-            
+
             if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
             {
                 e.Handled = true;

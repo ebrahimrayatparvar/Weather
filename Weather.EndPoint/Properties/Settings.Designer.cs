@@ -34,5 +34,29 @@ namespace Weather.EndPoint.Properties {
                 this["UserName"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string CityName {
+            get {
+                return ((string)(this["CityName"]));
+            }
+            set {
+                this["CityName"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string CityNamePersion {
+            get {
+                return ((string)(this["CityNamePersion"]));
+            }
+            set {
+                this["CityNamePersion"] = value;
+            }
+        }
     }
 }

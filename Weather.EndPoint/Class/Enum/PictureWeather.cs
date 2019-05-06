@@ -8,10 +8,21 @@ namespace Weather.EndPoint.Class.Enum
 {
     public enum PictureWeather
     {
-        rainy = 1, // بارانی
-        Sunny = 2, // آفتابی
-        Snow = 3, // برفی
-        PartlyCloudy = 4 , // نیمه ابری
+        Thunderstorm = 200, // رعد و برق
+        Drizzle = 300, // آبیاری
+        Rain = 500, // بارانی
+        Snow = 600, // برفی
+        Mist = 701, // غبار
+        Smoke = 711, // دود
+        Haze = 721, // هیز
+        Dust = 731, // گرد و خاک
+        Fog = 741, // مه
+        Sand = 751, // شن
+        Ash = 762, // خاکستر
+        Squall = 771, // بوران
+        Tornado = 781, // گردباد
+        Clear = 800, // صاف
+        Clouds = 801, // ابری
 
     }
 }

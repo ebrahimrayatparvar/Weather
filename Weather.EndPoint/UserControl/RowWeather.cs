@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Drawing;
 using DevExpress.XtraEditors;
+using Weather.EndPoint.Class;
 using Weather.EndPoint.Class.Enum;
 
 namespace Weather.EndPoint.UserControl
@@ -13,19 +14,21 @@ namespace Weather.EndPoint.UserControl
         }
         public bool Odd { get; set; }
         public int Row { get; set; }
-        public string Name { get; set; }
-        public int Degre { get; set; }
-        public PictureWeather PictureWeather { get; set; }
+        public string NamePersion { get; set; }
+        public string Degre { get; set; }
+        public int PictureWeather { get; set; }
 
        
 
         private void RowWeather_Load(object sender, EventArgs e)
         {
             lblRow.Text = Row.ToString();
-            lblName.Text = Name;
+            lblName.Text = NamePersion;
             lblDegre.Text = Degre.ToString();
             if(Odd)
                 this.BackColor = Color.FromArgb(62,62,65);
+            picWeather.Image = GetWeatherImage.GetImage(PictureWeather);
+            lblWeatherDescription.Text = GetWeatherImage.GetDescription(PictureWeather);
         }
     }
 }

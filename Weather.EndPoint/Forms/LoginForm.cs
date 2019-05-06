@@ -107,17 +107,7 @@ namespace Weather.EndPoint.Forms
             {
                 dxErrorProvider.SetError(txtRegisterPassword, null);
             }
-
-            if (string.IsNullOrWhiteSpace(txtEmail.Text))
-            {
-                dxErrorProvider.SetError(txtEmail, "وارد نمودن ایمیل الزامی می باشد.");
-                bl = true;
-            }
-            else
-            {
-                dxErrorProvider.SetError(txtEmail, null);
-            }
-
+            
 
             if (bl) return;
 
@@ -127,7 +117,11 @@ namespace Weather.EndPoint.Forms
                 family = txtFamily.Text,
                 Username = txtRegisterUsername.Text,
                 Password = txtRegisterPassword.Text,
-                Email = txtEmail.Text
+                Email = txtEmail.Text,
+                Mobile = txtMobile.Text,
+                Bod = DateTime.Parse(comboBod.EditValue.ToString()),
+                BodPersion = comboBod.Text,
+                Command = txtCommand.Text
             };
 
             if (!_obj.Register(obj))

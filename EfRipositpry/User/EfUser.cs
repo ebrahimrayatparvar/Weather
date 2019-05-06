@@ -13,10 +13,26 @@ namespace EfRipositpry.User
     {
         private ApplicationDbContext _db = new ApplicationDbContext();
 
+        public void AddFavoriteCity(string userName, string cityName)
+        {
+            var user = _db.Users.Where(q => q.Username.Equals(userName)).ToList();
+            foreach (var item in user)
+            {
+                item.FavoritesCity = cityName;
+            }
+            _db.Entry<UserEntity>(user[0]).State = System.Data.Entity.EntityState.Modified;
+            _db.SaveChanges();
+        }
 
         public void ChanghePassword(UserEntity obj)
         {
             throw new NotImplementedException();
+        }
+
+        public void Edit(UserEntity obj)
+        {
+            _db.Entry<UserEntity>(obj).State = System.Data.Entity.EntityState.Modified;
+            _db.SaveChanges();
         }
 
         public List<UserEntity> GetUserInformation(string userName) => _db.Users.Where(q => q.Username.Equals(userName)).ToList();

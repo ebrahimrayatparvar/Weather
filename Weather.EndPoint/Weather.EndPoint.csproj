@@ -56,6 +56,7 @@
     <Reference Include="DevExpress.Data.v15.2, Version=15.2.9.0, Culture=neutral, PublicKeyToken=aafb20a8e8c4d2cc" />
     <Reference Include="DevExpress.DataAccess.v15.2, Version=15.2.9.0, Culture=neutral, PublicKeyToken=aafb20a8e8c4d2cc" />
     <Reference Include="DevExpress.DataAccess.v15.2.UI, Version=15.2.9.0, Culture=neutral, PublicKeyToken=aafb20a8e8c4d2cc" />
+    <Reference Include="DevExpress.Images.v15.2, Version=15.2.9.0, Culture=neutral, PublicKeyToken=aafb20a8e8c4d2cc" />
     <Reference Include="DevExpress.Office.v15.2.Core, Version=15.2.9.0, Culture=neutral, PublicKeyToken=aafb20a8e8c4d2cc" />
     <Reference Include="DevExpress.Printing.v15.2.Core, Version=15.2.9.0, Culture=neutral, PublicKeyToken=aafb20a8e8c4d2cc" />
     <Reference Include="DevExpress.RichEdit.v15.2.Core, Version=15.2.9.0, Culture=neutral, PublicKeyToken=aafb20a8e8c4d2cc" />
@@ -92,10 +93,13 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="txtStringDLL">
+      <HintPath>E:\INSM\Project\Tara\کنترل سفارشی\txtStringDLL\txtStringDLL\bin\Debug\txtStringDLL.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Class\GetWeatherImage.cs" />
     <Compile Include="Class\Model\CityModel.cs" />
-    <Compile Include="Class\Model\WeatherModel.cs" />
     <Compile Include="Forms\EditUser.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -176,6 +180,10 @@
       <Project>{d881ee71-80d8-4efb-b890-14fd45761070}</Project>
       <Name>02-Weather.Contracts</Name>
     </ProjectReference>
+    <ProjectReference Include="..\03-Weather.Service\03-Weather.Service.csproj">
+      <Project>{C877E051-93D4-4D6A-B9E3-B2D101E6D4E4}</Project>
+      <Name>03-Weather.Service</Name>
+    </ProjectReference>
     <ProjectReference Include="..\EfRipositpry\EfRipositpry.csproj">
       <Project>{85C1642D-5A5A-45C2-9D85-D5FE9517CCD6}</Project>
       <Name>EfRipositpry</Name>
@@ -195,6 +203,61 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="cloud-new.ico" />
+    <None Include="Resources\200.png" />
+    <None Include="Resources\201.png" />
+    <None Include="Resources\202.png" />
+    <None Include="Resources\210.png" />
+    <None Include="Resources\211.png" />
+    <None Include="Resources\212.png" />
+    <None Include="Resources\221.png" />
+    <None Include="Resources\230.png" />
+    <None Include="Resources\231.png" />
+    <None Include="Resources\232.png" />
+    <None Include="Resources\300.png" />
+    <None Include="Resources\301.png" />
+    <None Include="Resources\302.png" />
+    <None Include="Resources\310.png" />
+    <None Include="Resources\311.png" />
+    <None Include="Resources\312.png" />
+    <None Include="Resources\313.png" />
+    <None Include="Resources\314.png" />
+    <None Include="Resources\321.png" />
+    <None Include="Resources\500.png" />
+    <None Include="Resources\501.png" />
+    <None Include="Resources\502.png" />
+    <None Include="Resources\503.png" />
+    <None Include="Resources\504.png" />
+    <None Include="Resources\511.png" />
+    <None Include="Resources\520.png" />
+    <None Include="Resources\521.png" />
+    <None Include="Resources\522.png" />
+    <None Include="Resources\531.png" />
+    <None Include="Resources\600.png" />
+    <None Include="Resources\601.png" />
+    <None Include="Resources\602.png" />
+    <None Include="Resources\611.png" />
+    <None Include="Resources\612.png" />
+    <None Include="Resources\613.png" />
+    <None Include="Resources\615.png" />
+    <None Include="Resources\616.png" />
+    <None Include="Resources\620.png" />
+    <None Include="Resources\621.png" />
+    <None Include="Resources\622.png" />
+    <None Include="Resources\701.png" />
+    <None Include="Resources\711.png" />
+    <None Include="Resources\721.png" />
+    <None Include="Resources\731.png" />
+    <None Include="Resources\741.png" />
+    <None Include="Resources\751.png" />
+    <None Include="Resources\761.png" />
+    <None Include="Resources\762.png" />
+    <None Include="Resources\771.png" />
+    <None Include="Resources\781.png" />
+    <None Include="Resources\800.png" />
+    <None Include="Resources\801.png" />
+    <None Include="Resources\802.png" />
+    <None Include="Resources\803.png" />
+    <None Include="Resources\804.png" />
     <Content Include="Resources\user_symbol_green-edit.ico" />
     <None Include="Resources\EditUser.png" />
     <None Include="Resources\images.jpg" />

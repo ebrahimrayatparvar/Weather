@@ -42,34 +42,45 @@
             this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
             this.barHeaderItem1 = new DevExpress.XtraBars.BarHeaderItem();
+            this.barBtnFavoritesCity = new DevExpress.XtraBars.BarButtonItem();
+            this.scrollBar = new DevExpress.XtraEditors.XtraScrollableControl();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.panelRowWeather = new DevExpress.XtraEditors.PanelControl();
-            this.scrollBar = new DevExpress.XtraEditors.XtraScrollableControl();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
-            this.pictureEdit1 = new DevExpress.XtraEditors.PictureEdit();
-            this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
+            this.picWeather = new DevExpress.XtraEditors.PictureEdit();
+            this.lblUserName = new DevExpress.XtraEditors.LabelControl();
             this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
-            this.labelControl14 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl12 = new DevExpress.XtraEditors.LabelControl();
+            this.lblTemp = new DevExpress.XtraEditors.LabelControl();
+            this.lblDescription = new DevExpress.XtraEditors.LabelControl();
+            this.lblLat = new DevExpress.XtraEditors.LabelControl();
+            this.lblHumidity = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl20 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl11 = new DevExpress.XtraEditors.LabelControl();
+            this.lblSpeed = new DevExpress.XtraEditors.LabelControl();
             this.labelControl13 = new DevExpress.XtraEditors.LabelControl();
+            this.label = new DevExpress.XtraEditors.LabelControl();
             this.labelControl10 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl9 = new DevExpress.XtraEditors.LabelControl();
+            this.lblLng = new DevExpress.XtraEditors.LabelControl();
+            this.lblPressure = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl16 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl8 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl15 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
+            this.lblCity = new DevExpress.XtraEditors.LabelControl();
             this.timerWeather = new System.Windows.Forms.Timer(this.components);
+            this.imageCollectionWeather = new DevExpress.Utils.ImageCollection(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.barManagerWeather)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelRowWeather)).BeginInit();
             this.panelRowWeather.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picWeather.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
             this.panelControl2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.imageCollectionWeather)).BeginInit();
             this.SuspendLayout();
             // 
             // defaultLookAndFeel
@@ -89,8 +100,9 @@
             this.barManagerWeather.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
             this.barHeaderItem1,
             this.barStaticTime,
-            this.barBtnEditUser});
-            this.barManagerWeather.MaxItemId = 3;
+            this.barBtnEditUser,
+            this.barBtnFavoritesCity});
+            this.barManagerWeather.MaxItemId = 5;
             this.barManagerWeather.RightToLeft = DevExpress.Utils.DefaultBoolean.True;
             this.barManagerWeather.StatusBar = this.bar3;
             // 
@@ -170,6 +182,19 @@
             this.barHeaderItem1.Id = 0;
             this.barHeaderItem1.Name = "barHeaderItem1";
             // 
+            // barBtnFavoritesCity
+            // 
+            this.barBtnFavoritesCity.Id = 4;
+            this.barBtnFavoritesCity.Name = "barBtnFavoritesCity";
+            // 
+            // scrollBar
+            // 
+            this.scrollBar.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.scrollBar.Location = new System.Drawing.Point(2, 2);
+            this.scrollBar.Name = "scrollBar";
+            this.scrollBar.Size = new System.Drawing.Size(618, 483);
+            this.scrollBar.TabIndex = 0;
+            // 
             // panelControl1
             // 
             this.panelControl1.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
@@ -208,14 +233,6 @@
             this.panelRowWeather.Size = new System.Drawing.Size(622, 487);
             this.panelRowWeather.TabIndex = 5;
             // 
-            // scrollBar
-            // 
-            this.scrollBar.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.scrollBar.Location = new System.Drawing.Point(2, 2);
-            this.scrollBar.Name = "scrollBar";
-            this.scrollBar.Size = new System.Drawing.Size(618, 483);
-            this.scrollBar.TabIndex = 0;
-            // 
             // labelControl2
             // 
             this.labelControl2.Appearance.Font = new System.Drawing.Font("B Nazanin", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
@@ -231,43 +248,43 @@
             this.labelControl3.Appearance.Font = new System.Drawing.Font("B Nazanin", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.labelControl3.Appearance.ForeColor = System.Drawing.Color.Silver;
             this.labelControl3.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.labelControl3.Location = new System.Drawing.Point(391, 119);
+            this.labelControl3.Location = new System.Drawing.Point(273, 119);
             this.labelControl3.Name = "labelControl3";
-            this.labelControl3.Size = new System.Drawing.Size(116, 30);
+            this.labelControl3.Size = new System.Drawing.Size(234, 30);
             this.labelControl3.TabIndex = 11;
             this.labelControl3.Text = "1398/02/01";
             // 
-            // pictureEdit1
+            // picWeather
             // 
-            this.pictureEdit1.EditValue = global::Weather.EndPoint.Properties.Resources.images;
-            this.pictureEdit1.Location = new System.Drawing.Point(62, 63);
-            this.pictureEdit1.MenuManager = this.barManagerWeather;
-            this.pictureEdit1.Name = "pictureEdit1";
-            this.pictureEdit1.Parmida_ActivePlusMultiKeys = false;
-            this.pictureEdit1.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
-            this.pictureEdit1.Properties.Appearance.Options.UseBackColor = true;
-            this.pictureEdit1.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
-            this.pictureEdit1.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
-            this.pictureEdit1.Size = new System.Drawing.Size(205, 174);
-            this.pictureEdit1.TabIndex = 16;
+            this.picWeather.EditValue = global::Weather.EndPoint.Properties.Resources.images;
+            this.picWeather.Location = new System.Drawing.Point(62, 63);
+            this.picWeather.MenuManager = this.barManagerWeather;
+            this.picWeather.Name = "picWeather";
+            this.picWeather.Parmida_ActivePlusMultiKeys = false;
+            this.picWeather.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
+            this.picWeather.Properties.Appearance.Options.UseBackColor = true;
+            this.picWeather.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
+            this.picWeather.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
+            this.picWeather.Size = new System.Drawing.Size(205, 174);
+            this.picWeather.TabIndex = 16;
             // 
-            // labelControl4
+            // lblUserName
             // 
-            this.labelControl4.Appearance.Font = new System.Drawing.Font("B Nazanin", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.labelControl4.Appearance.ForeColor = System.Drawing.Color.Silver;
-            this.labelControl4.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.labelControl4.Location = new System.Drawing.Point(273, 160);
-            this.labelControl4.Name = "labelControl4";
-            this.labelControl4.Size = new System.Drawing.Size(234, 30);
-            this.labelControl4.TabIndex = 21;
-            this.labelControl4.Text = "ابراهیم رعیت پرور تلوکی";
+            this.lblUserName.Appearance.Font = new System.Drawing.Font("B Nazanin", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.lblUserName.Appearance.ForeColor = System.Drawing.Color.Silver;
+            this.lblUserName.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
+            this.lblUserName.Location = new System.Drawing.Point(273, 207);
+            this.lblUserName.Name = "lblUserName";
+            this.lblUserName.Size = new System.Drawing.Size(234, 30);
+            this.lblUserName.TabIndex = 21;
+            this.lblUserName.Text = "ابراهیم رعیت پرور تلوکی";
             // 
             // labelControl5
             // 
             this.labelControl5.Appearance.Font = new System.Drawing.Font("B Nazanin", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.labelControl5.Appearance.ForeColor = System.Drawing.Color.Silver;
             this.labelControl5.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.labelControl5.Location = new System.Drawing.Point(273, 207);
+            this.labelControl5.Location = new System.Drawing.Point(273, 167);
             this.labelControl5.Name = "labelControl5";
             this.labelControl5.Size = new System.Drawing.Size(234, 30);
             this.labelControl5.TabIndex = 22;
@@ -275,132 +292,225 @@
             // 
             // panelControl2
             // 
-            this.panelControl2.Controls.Add(this.labelControl14);
-            this.panelControl2.Controls.Add(this.labelControl12);
+            this.panelControl2.Controls.Add(this.lblTemp);
+            this.panelControl2.Controls.Add(this.lblDescription);
+            this.panelControl2.Controls.Add(this.lblLat);
+            this.panelControl2.Controls.Add(this.lblHumidity);
+            this.panelControl2.Controls.Add(this.labelControl20);
             this.panelControl2.Controls.Add(this.labelControl11);
+            this.panelControl2.Controls.Add(this.lblSpeed);
             this.panelControl2.Controls.Add(this.labelControl13);
+            this.panelControl2.Controls.Add(this.label);
             this.panelControl2.Controls.Add(this.labelControl10);
-            this.panelControl2.Controls.Add(this.labelControl9);
+            this.panelControl2.Controls.Add(this.lblLng);
+            this.panelControl2.Controls.Add(this.lblPressure);
+            this.panelControl2.Controls.Add(this.labelControl16);
             this.panelControl2.Controls.Add(this.labelControl8);
+            this.panelControl2.Controls.Add(this.labelControl15);
             this.panelControl2.Controls.Add(this.labelControl7);
-            this.panelControl2.Controls.Add(this.labelControl6);
+            this.panelControl2.Controls.Add(this.lblCity);
             this.panelControl2.Location = new System.Drawing.Point(62, 250);
             this.panelControl2.Name = "panelControl2";
             this.panelControl2.Size = new System.Drawing.Size(445, 341);
             this.panelControl2.TabIndex = 27;
             // 
-            // labelControl14
+            // lblTemp
             // 
-            this.labelControl14.Appearance.Font = new System.Drawing.Font("B Nazanin", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.labelControl14.Appearance.ForeColor = System.Drawing.Color.Silver;
-            this.labelControl14.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.labelControl14.Location = new System.Drawing.Point(235, 183);
-            this.labelControl14.Name = "labelControl14";
-            this.labelControl14.Size = new System.Drawing.Size(116, 30);
-            this.labelControl14.TabIndex = 18;
-            this.labelControl14.Text = "1398/02/01";
+            this.lblTemp.Appearance.Font = new System.Drawing.Font("B Nazanin", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.lblTemp.Appearance.ForeColor = System.Drawing.Color.Silver;
+            this.lblTemp.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
+            this.lblTemp.Location = new System.Drawing.Point(199, 194);
+            this.lblTemp.Name = "lblTemp";
+            this.lblTemp.Size = new System.Drawing.Size(149, 30);
+            this.lblTemp.TabIndex = 18;
             // 
-            // labelControl12
+            // lblDescription
             // 
-            this.labelControl12.Appearance.Font = new System.Drawing.Font("B Nazanin", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.labelControl12.Appearance.ForeColor = System.Drawing.Color.Silver;
-            this.labelControl12.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.labelControl12.Location = new System.Drawing.Point(235, 117);
-            this.labelControl12.Name = "labelControl12";
-            this.labelControl12.Size = new System.Drawing.Size(116, 30);
-            this.labelControl12.TabIndex = 18;
-            this.labelControl12.Text = "1398/02/01";
+            this.lblDescription.Appearance.Font = new System.Drawing.Font("B Nazanin", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.lblDescription.Appearance.ForeColor = System.Drawing.Color.Silver;
+            this.lblDescription.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
+            this.lblDescription.Location = new System.Drawing.Point(199, 90);
+            this.lblDescription.Name = "lblDescription";
+            this.lblDescription.Size = new System.Drawing.Size(149, 30);
+            this.lblDescription.TabIndex = 18;
+            // 
+            // lblLat
+            // 
+            this.lblLat.Appearance.Font = new System.Drawing.Font("B Nazanin", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.lblLat.Appearance.ForeColor = System.Drawing.Color.Silver;
+            this.lblLat.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
+            this.lblLat.Location = new System.Drawing.Point(199, 140);
+            this.lblLat.Name = "lblLat";
+            this.lblLat.Size = new System.Drawing.Size(149, 30);
+            this.lblLat.TabIndex = 18;
+            // 
+            // lblHumidity
+            // 
+            this.lblHumidity.Appearance.Font = new System.Drawing.Font("B Nazanin", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.lblHumidity.Appearance.ForeColor = System.Drawing.Color.Silver;
+            this.lblHumidity.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
+            this.lblHumidity.Location = new System.Drawing.Point(199, 245);
+            this.lblHumidity.Name = "lblHumidity";
+            this.lblHumidity.Size = new System.Drawing.Size(149, 30);
+            this.lblHumidity.TabIndex = 18;
+            // 
+            // labelControl20
+            // 
+            this.labelControl20.Appearance.Font = new System.Drawing.Font("B Nazanin", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.labelControl20.Appearance.ForeColor = System.Drawing.Color.Silver;
+            this.labelControl20.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
+            this.labelControl20.Location = new System.Drawing.Point(124, 194);
+            this.labelControl20.Name = "labelControl20";
+            this.labelControl20.Size = new System.Drawing.Size(69, 30);
+            this.labelControl20.TabIndex = 17;
+            this.labelControl20.Text = "سرعت باد :";
             // 
             // labelControl11
             // 
             this.labelControl11.Appearance.Font = new System.Drawing.Font("B Nazanin", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.labelControl11.Appearance.ForeColor = System.Drawing.Color.Silver;
             this.labelControl11.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.labelControl11.Location = new System.Drawing.Point(145, 183);
+            this.labelControl11.Location = new System.Drawing.Point(124, 90);
             this.labelControl11.Name = "labelControl11";
             this.labelControl11.Size = new System.Drawing.Size(69, 30);
             this.labelControl11.TabIndex = 17;
             this.labelControl11.Text = "دمای شب : ";
+            // 
+            // lblSpeed
+            // 
+            this.lblSpeed.Appearance.Font = new System.Drawing.Font("B Nazanin", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.lblSpeed.Appearance.ForeColor = System.Drawing.Color.Silver;
+            this.lblSpeed.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
+            this.lblSpeed.Location = new System.Drawing.Point(20, 194);
+            this.lblSpeed.Name = "lblSpeed";
+            this.lblSpeed.Size = new System.Drawing.Size(98, 30);
+            this.lblSpeed.TabIndex = 15;
             // 
             // labelControl13
             // 
             this.labelControl13.Appearance.Font = new System.Drawing.Font("B Nazanin", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.labelControl13.Appearance.ForeColor = System.Drawing.Color.Silver;
             this.labelControl13.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.labelControl13.Location = new System.Drawing.Point(23, 183);
+            this.labelControl13.Location = new System.Drawing.Point(20, 90);
             this.labelControl13.Name = "labelControl13";
-            this.labelControl13.Size = new System.Drawing.Size(116, 30);
+            this.labelControl13.Size = new System.Drawing.Size(98, 30);
             this.labelControl13.TabIndex = 15;
-            this.labelControl13.Text = "1398/02/01";
+            // 
+            // label
+            // 
+            this.label.Appearance.Font = new System.Drawing.Font("B Nazanin", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.label.Appearance.ForeColor = System.Drawing.Color.Silver;
+            this.label.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
+            this.label.Location = new System.Drawing.Point(354, 194);
+            this.label.Name = "label";
+            this.label.Size = new System.Drawing.Size(69, 30);
+            this.label.TabIndex = 16;
+            this.label.Text = "دما : ";
             // 
             // labelControl10
             // 
             this.labelControl10.Appearance.Font = new System.Drawing.Font("B Nazanin", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.labelControl10.Appearance.ForeColor = System.Drawing.Color.Silver;
             this.labelControl10.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.labelControl10.Location = new System.Drawing.Point(357, 183);
+            this.labelControl10.Location = new System.Drawing.Point(354, 90);
             this.labelControl10.Name = "labelControl10";
             this.labelControl10.Size = new System.Drawing.Size(69, 30);
             this.labelControl10.TabIndex = 16;
-            this.labelControl10.Text = "دمای روز : ";
+            this.labelControl10.Text = "آسمان :";
             // 
-            // labelControl9
+            // lblLng
             // 
-            this.labelControl9.Appearance.Font = new System.Drawing.Font("B Nazanin", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.labelControl9.Appearance.ForeColor = System.Drawing.Color.Silver;
-            this.labelControl9.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.labelControl9.Location = new System.Drawing.Point(23, 117);
-            this.labelControl9.Name = "labelControl9";
-            this.labelControl9.Size = new System.Drawing.Size(116, 30);
-            this.labelControl9.TabIndex = 15;
-            this.labelControl9.Text = "1398/02/01";
+            this.lblLng.Appearance.Font = new System.Drawing.Font("B Nazanin", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.lblLng.Appearance.ForeColor = System.Drawing.Color.Silver;
+            this.lblLng.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
+            this.lblLng.Location = new System.Drawing.Point(20, 140);
+            this.lblLng.Name = "lblLng";
+            this.lblLng.Size = new System.Drawing.Size(98, 30);
+            this.lblLng.TabIndex = 15;
+            // 
+            // lblPressure
+            // 
+            this.lblPressure.Appearance.Font = new System.Drawing.Font("B Nazanin", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.lblPressure.Appearance.ForeColor = System.Drawing.Color.Silver;
+            this.lblPressure.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
+            this.lblPressure.Location = new System.Drawing.Point(20, 245);
+            this.lblPressure.Name = "lblPressure";
+            this.lblPressure.Size = new System.Drawing.Size(98, 30);
+            this.lblPressure.TabIndex = 15;
+            // 
+            // labelControl16
+            // 
+            this.labelControl16.Appearance.Font = new System.Drawing.Font("B Nazanin", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.labelControl16.Appearance.ForeColor = System.Drawing.Color.Silver;
+            this.labelControl16.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
+            this.labelControl16.Location = new System.Drawing.Point(124, 140);
+            this.labelControl16.Name = "labelControl16";
+            this.labelControl16.Size = new System.Drawing.Size(69, 30);
+            this.labelControl16.TabIndex = 14;
+            this.labelControl16.Text = "Lng : ";
             // 
             // labelControl8
             // 
             this.labelControl8.Appearance.Font = new System.Drawing.Font("B Nazanin", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.labelControl8.Appearance.ForeColor = System.Drawing.Color.Silver;
             this.labelControl8.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.labelControl8.Location = new System.Drawing.Point(145, 117);
+            this.labelControl8.Location = new System.Drawing.Point(124, 245);
             this.labelControl8.Name = "labelControl8";
             this.labelControl8.Size = new System.Drawing.Size(69, 30);
             this.labelControl8.TabIndex = 14;
-            this.labelControl8.Text = "Lng : ";
+            this.labelControl8.Text = "فشار : ";
+            // 
+            // labelControl15
+            // 
+            this.labelControl15.Appearance.Font = new System.Drawing.Font("B Nazanin", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.labelControl15.Appearance.ForeColor = System.Drawing.Color.Silver;
+            this.labelControl15.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
+            this.labelControl15.Location = new System.Drawing.Point(354, 140);
+            this.labelControl15.Name = "labelControl15";
+            this.labelControl15.Size = new System.Drawing.Size(69, 30);
+            this.labelControl15.TabIndex = 13;
+            this.labelControl15.Text = "Lat : ";
             // 
             // labelControl7
             // 
             this.labelControl7.Appearance.Font = new System.Drawing.Font("B Nazanin", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.labelControl7.Appearance.ForeColor = System.Drawing.Color.Silver;
             this.labelControl7.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.labelControl7.Location = new System.Drawing.Point(357, 117);
+            this.labelControl7.Location = new System.Drawing.Point(354, 245);
             this.labelControl7.Name = "labelControl7";
             this.labelControl7.Size = new System.Drawing.Size(69, 30);
             this.labelControl7.TabIndex = 13;
-            this.labelControl7.Text = "Lat : ";
+            this.labelControl7.Text = "رطوبت :";
             // 
-            // labelControl6
+            // lblCity
             // 
-            this.labelControl6.Appearance.Font = new System.Drawing.Font("B Titr", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.labelControl6.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.labelControl6.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.labelControl6.Appearance.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.labelControl6.AppearanceDisabled.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.labelControl6.AppearanceDisabled.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.labelControl6.AppearanceHovered.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.labelControl6.AppearanceHovered.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.labelControl6.AppearancePressed.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.labelControl6.AppearancePressed.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.labelControl6.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.labelControl6.Location = new System.Drawing.Point(104, 19);
-            this.labelControl6.Name = "labelControl6";
-            this.labelControl6.Size = new System.Drawing.Size(223, 39);
-            this.labelControl6.TabIndex = 12;
-            this.labelControl6.Text = "قائمشهر";
+            this.lblCity.Appearance.Font = new System.Drawing.Font("B Titr", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.lblCity.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.lblCity.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.lblCity.Appearance.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.lblCity.AppearanceDisabled.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.lblCity.AppearanceDisabled.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.lblCity.AppearanceHovered.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.lblCity.AppearanceHovered.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.lblCity.AppearancePressed.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.lblCity.AppearancePressed.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.lblCity.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
+            this.lblCity.Location = new System.Drawing.Point(5, 5);
+            this.lblCity.Name = "lblCity";
+            this.lblCity.Size = new System.Drawing.Size(435, 39);
+            this.lblCity.TabIndex = 12;
             // 
             // timerWeather
             // 
             this.timerWeather.Enabled = true;
             this.timerWeather.Interval = 1000;
             this.timerWeather.Tick += new System.EventHandler(this.timerWeather_Tick);
+            // 
+            // imageCollectionWeather
+            // 
+            this.imageCollectionWeather.ImageStream = ((DevExpress.Utils.ImageCollectionStreamer)(resources.GetObject("imageCollectionWeather.ImageStream")));
+            this.imageCollectionWeather.InsertGalleryImage("geopoint_16x16.png", "images/maps/geopoint_16x16.png", DevExpress.Images.ImageResourceCache.Default.GetImage("images/maps/geopoint_16x16.png"), 0);
+            this.imageCollectionWeather.Images.SetKeyName(0, "geopoint_16x16.png");
             // 
             // MainForm
             // 
@@ -409,8 +519,8 @@
             this.ClientSize = new System.Drawing.Size(1184, 661);
             this.Controls.Add(this.panelControl2);
             this.Controls.Add(this.labelControl5);
-            this.Controls.Add(this.labelControl4);
-            this.Controls.Add(this.pictureEdit1);
+            this.Controls.Add(this.lblUserName);
+            this.Controls.Add(this.picWeather);
             this.Controls.Add(this.labelControl3);
             this.Controls.Add(this.labelControl2);
             this.Controls.Add(this.panelRowWeather);
@@ -430,9 +540,10 @@
             this.panelControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.panelRowWeather)).EndInit();
             this.panelRowWeather.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picWeather.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).EndInit();
             this.panelControl2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.imageCollectionWeather)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -455,22 +566,32 @@
         private DevExpress.XtraEditors.LabelControl labelControl3;
         private DevExpress.XtraEditors.LabelControl labelControl2;
         private DevExpress.XtraEditors.XtraScrollableControl scrollBar;
-        private DevExpress.XtraEditors.PictureEdit pictureEdit1;
+        private DevExpress.XtraEditors.PictureEdit picWeather;
         private DevExpress.XtraEditors.LabelControl labelControl5;
-        private DevExpress.XtraEditors.LabelControl labelControl4;
+        private DevExpress.XtraEditors.LabelControl lblUserName;
         private DevExpress.XtraEditors.PanelControl panelControl2;
-        private DevExpress.XtraEditors.LabelControl labelControl12;
+        private DevExpress.XtraEditors.LabelControl lblHumidity;
         private DevExpress.XtraEditors.LabelControl labelControl11;
         private DevExpress.XtraEditors.LabelControl labelControl10;
-        private DevExpress.XtraEditors.LabelControl labelControl9;
+        private DevExpress.XtraEditors.LabelControl lblPressure;
         private DevExpress.XtraEditors.LabelControl labelControl8;
         private DevExpress.XtraEditors.LabelControl labelControl7;
-        private DevExpress.XtraEditors.LabelControl labelControl6;
+        private DevExpress.XtraEditors.LabelControl lblCity;
         private DevExpress.XtraBars.BarStaticItem barStaticTime;
         private DevExpress.XtraBars.BarHeaderItem barHeaderItem1;
         private System.Windows.Forms.Timer timerWeather;
         private DevExpress.XtraBars.BarButtonItem barBtnEditUser;
-        private DevExpress.XtraEditors.LabelControl labelControl14;
+        private DevExpress.XtraEditors.LabelControl lblDescription;
         private DevExpress.XtraEditors.LabelControl labelControl13;
+        private DevExpress.XtraBars.BarButtonItem barBtnFavoritesCity;
+        private DevExpress.Utils.ImageCollection imageCollectionWeather;
+        private DevExpress.XtraEditors.LabelControl lblTemp;
+        private DevExpress.XtraEditors.LabelControl lblLat;
+        private DevExpress.XtraEditors.LabelControl labelControl20;
+        private DevExpress.XtraEditors.LabelControl lblSpeed;
+        private DevExpress.XtraEditors.LabelControl label;
+        private DevExpress.XtraEditors.LabelControl lblLng;
+        private DevExpress.XtraEditors.LabelControl labelControl16;
+        private DevExpress.XtraEditors.LabelControl labelControl15;
     }
 }

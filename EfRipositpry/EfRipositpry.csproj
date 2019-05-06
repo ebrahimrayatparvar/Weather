@@ -61,6 +61,10 @@
     <Compile Include="Migrations\201905051752543_update-entity-user.Designer.cs">
       <DependentUpon>201905051752543_update-entity-user.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201905060913112_02-add-BodPersion-fild-to-user-entity.cs" />
+    <Compile Include="Migrations\201905060913112_02-add-BodPersion-fild-to-user-entity.Designer.cs">
+      <DependentUpon>201905060913112_02-add-BodPersion-fild-to-user-entity.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="User\EfUser.cs" />
@@ -78,6 +82,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201905051752543_update-entity-user.resx">
       <DependentUpon>201905051752543_update-entity-user.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201905060913112_02-add-BodPersion-fild-to-user-entity.resx">
+      <DependentUpon>201905060913112_02-add-BodPersion-fild-to-user-entity.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

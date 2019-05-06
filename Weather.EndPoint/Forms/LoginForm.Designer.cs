@@ -34,8 +34,14 @@
             this.defaultLookAndFeel = new DevExpress.LookAndFeel.DefaultLookAndFeel(this.components);
             this.navigationFrame = new DevExpress.XtraBars.Navigation.NavigationFrame();
             this.navigationPageRegister = new DevExpress.XtraBars.Navigation.NavigationPage();
+            this.txtCommand = new DevExpress.XtraEditors.TextEdit();
+            this.lblCommand = new DevExpress.XtraEditors.LabelControl();
             this.txtEmail = new DevExpress.XtraEditors.TextEdit();
-            this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
+            this.lblEmail = new DevExpress.XtraEditors.LabelControl();
+            this.comboBod = new DevExpress.XtraEditors.DateEdit();
+            this.txtMobile = new DevExpress.XtraEditors.TextEdit();
+            this.lblMobile = new DevExpress.XtraEditors.LabelControl();
+            this.lblDob = new DevExpress.XtraEditors.LabelControl();
             this.txtRegisterPassword = new DevExpress.XtraEditors.TextEdit();
             this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
             this.txtFamily = new DevExpress.XtraEditors.TextEdit();
@@ -61,7 +67,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.navigationFrame)).BeginInit();
             this.navigationFrame.SuspendLayout();
             this.navigationPageRegister.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtCommand.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtEmail.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.comboBod.Properties.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.comboBod.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtMobile.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtRegisterPassword.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtFamily.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtRegisterUsername.Properties)).BeginInit();
@@ -91,15 +101,21 @@
             this.navigationPageRegister,
             this.navigationPageLogin});
             this.navigationFrame.SelectedPage = this.navigationPageLogin;
-            this.navigationFrame.Size = new System.Drawing.Size(436, 440);
+            this.navigationFrame.Size = new System.Drawing.Size(436, 448);
             this.navigationFrame.TabIndex = 0;
             this.navigationFrame.Text = "navigationFrame1";
             // 
             // navigationPageRegister
             // 
             this.navigationPageRegister.Caption = "navigationPageRegister";
+            this.navigationPageRegister.Controls.Add(this.txtCommand);
+            this.navigationPageRegister.Controls.Add(this.lblCommand);
             this.navigationPageRegister.Controls.Add(this.txtEmail);
-            this.navigationPageRegister.Controls.Add(this.labelControl7);
+            this.navigationPageRegister.Controls.Add(this.lblEmail);
+            this.navigationPageRegister.Controls.Add(this.comboBod);
+            this.navigationPageRegister.Controls.Add(this.txtMobile);
+            this.navigationPageRegister.Controls.Add(this.lblMobile);
+            this.navigationPageRegister.Controls.Add(this.lblDob);
             this.navigationPageRegister.Controls.Add(this.txtRegisterPassword);
             this.navigationPageRegister.Controls.Add(this.labelControl6);
             this.navigationPageRegister.Controls.Add(this.txtFamily);
@@ -112,16 +128,46 @@
             this.navigationPageRegister.Controls.Add(this.btnCancel);
             this.navigationPageRegister.Controls.Add(this.panelControl2);
             this.navigationPageRegister.Name = "navigationPageRegister";
-            this.navigationPageRegister.Size = new System.Drawing.Size(436, 440);
+            this.navigationPageRegister.Size = new System.Drawing.Size(436, 448);
+            // 
+            // txtCommand
+            // 
+            this.txtCommand.EditValue = "";
+            this.txtCommand.EnterMoveNextControl = true;
+            this.txtCommand.Location = new System.Drawing.Point(34, 365);
+            this.txtCommand.Name = "txtCommand";
+            this.txtCommand.Parmida_ActivePlusMultiKeys = false;
+            this.txtCommand.Properties.Appearance.Font = new System.Drawing.Font("B Nazanin", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.txtCommand.Properties.Appearance.Options.UseFont = true;
+            this.txtCommand.Properties.Appearance.Options.UseTextOptions = true;
+            this.txtCommand.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.txtCommand.Properties.AppearanceDisabled.Options.UseTextOptions = true;
+            this.txtCommand.Properties.AppearanceDisabled.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.txtCommand.Properties.AppearanceFocused.Options.UseTextOptions = true;
+            this.txtCommand.Properties.AppearanceFocused.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.txtCommand.Properties.AppearanceReadOnly.Options.UseTextOptions = true;
+            this.txtCommand.Properties.AppearanceReadOnly.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.txtCommand.Size = new System.Drawing.Size(269, 32);
+            this.txtCommand.TabIndex = 22;
+            // 
+            // lblCommand
+            // 
+            this.lblCommand.Appearance.Font = new System.Drawing.Font("B Nazanin", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.lblCommand.Appearance.ForeColor = System.Drawing.Color.White;
+            this.lblCommand.Location = new System.Drawing.Point(344, 369);
+            this.lblCommand.Name = "lblCommand";
+            this.lblCommand.Size = new System.Drawing.Size(49, 24);
+            this.lblCommand.TabIndex = 21;
+            this.lblCommand.Text = "توضیحات";
             // 
             // txtEmail
             // 
             this.txtEmail.EditValue = "";
             this.txtEmail.EnterMoveNextControl = true;
-            this.txtEmail.Location = new System.Drawing.Point(34, 267);
+            this.txtEmail.Location = new System.Drawing.Point(34, 327);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Parmida_ActivePlusMultiKeys = false;
-            this.txtEmail.Properties.Appearance.Font = new System.Drawing.Font("B Nazanin", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.txtEmail.Properties.Appearance.Font = new System.Drawing.Font("B Nazanin", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.txtEmail.Properties.Appearance.Options.UseFont = true;
             this.txtEmail.Properties.Appearance.Options.UseTextOptions = true;
             this.txtEmail.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
@@ -131,27 +177,84 @@
             this.txtEmail.Properties.AppearanceFocused.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.txtEmail.Properties.AppearanceReadOnly.Options.UseTextOptions = true;
             this.txtEmail.Properties.AppearanceReadOnly.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.txtEmail.Size = new System.Drawing.Size(269, 36);
-            this.txtEmail.TabIndex = 13;
+            this.txtEmail.Size = new System.Drawing.Size(269, 32);
+            this.txtEmail.TabIndex = 20;
             // 
-            // labelControl7
+            // lblEmail
             // 
-            this.labelControl7.Appearance.Font = new System.Drawing.Font("B Nazanin", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.labelControl7.Appearance.ForeColor = System.Drawing.Color.White;
-            this.labelControl7.Location = new System.Drawing.Point(364, 268);
-            this.labelControl7.Name = "labelControl7";
-            this.labelControl7.Size = new System.Drawing.Size(39, 33);
-            this.labelControl7.TabIndex = 4;
-            this.labelControl7.Text = "ایمیل";
+            this.lblEmail.Appearance.Font = new System.Drawing.Font("B Nazanin", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.lblEmail.Appearance.ForeColor = System.Drawing.Color.White;
+            this.lblEmail.Location = new System.Drawing.Point(364, 331);
+            this.lblEmail.Name = "lblEmail";
+            this.lblEmail.Size = new System.Drawing.Size(29, 24);
+            this.lblEmail.TabIndex = 19;
+            this.lblEmail.Text = "ایمیل";
+            // 
+            // comboBod
+            // 
+            this.comboBod.EditValue = null;
+            this.comboBod.Location = new System.Drawing.Point(34, 251);
+            this.comboBod.Name = "comboBod";
+            this.comboBod.Parmida_ActivePlusMultiKeys = false;
+            this.comboBod.Properties.Appearance.Font = new System.Drawing.Font("B Nazanin", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.comboBod.Properties.Appearance.Options.UseFont = true;
+            this.comboBod.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.comboBod.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.comboBod.Properties.Parmida_CheckDateOnLeave = false;
+            this.comboBod.Properties.Parmida_CheckEmptyFillDateOnEnter = false;
+            this.comboBod.Size = new System.Drawing.Size(269, 32);
+            this.comboBod.TabIndex = 18;
+            // 
+            // txtMobile
+            // 
+            this.txtMobile.EditValue = "";
+            this.txtMobile.EnterMoveNextControl = true;
+            this.txtMobile.Location = new System.Drawing.Point(34, 289);
+            this.txtMobile.Name = "txtMobile";
+            this.txtMobile.Parmida_ActivePlusMultiKeys = false;
+            this.txtMobile.Properties.Appearance.Font = new System.Drawing.Font("B Nazanin", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.txtMobile.Properties.Appearance.Options.UseFont = true;
+            this.txtMobile.Properties.Appearance.Options.UseTextOptions = true;
+            this.txtMobile.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.txtMobile.Properties.AppearanceDisabled.Options.UseTextOptions = true;
+            this.txtMobile.Properties.AppearanceDisabled.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.txtMobile.Properties.AppearanceFocused.Options.UseTextOptions = true;
+            this.txtMobile.Properties.AppearanceFocused.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.txtMobile.Properties.AppearanceReadOnly.Options.UseTextOptions = true;
+            this.txtMobile.Properties.AppearanceReadOnly.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.txtMobile.Size = new System.Drawing.Size(269, 32);
+            this.txtMobile.TabIndex = 17;
+            // 
+            // lblMobile
+            // 
+            this.lblMobile.Appearance.Font = new System.Drawing.Font("B Nazanin", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.lblMobile.Appearance.ForeColor = System.Drawing.Color.White;
+            this.lblMobile.Location = new System.Drawing.Point(360, 293);
+            this.lblMobile.Name = "lblMobile";
+            this.lblMobile.Size = new System.Drawing.Size(33, 24);
+            this.lblMobile.TabIndex = 16;
+            this.lblMobile.Text = "موبایل";
+            // 
+            // lblDob
+            // 
+            this.lblDob.Appearance.Font = new System.Drawing.Font("B Nazanin", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.lblDob.Appearance.ForeColor = System.Drawing.Color.White;
+            this.lblDob.Location = new System.Drawing.Point(340, 255);
+            this.lblDob.Name = "lblDob";
+            this.lblDob.Size = new System.Drawing.Size(53, 24);
+            this.lblDob.TabIndex = 4;
+            this.lblDob.Text = "تاریخ تولد";
             // 
             // txtRegisterPassword
             // 
             this.txtRegisterPassword.EditValue = "";
             this.txtRegisterPassword.EnterMoveNextControl = true;
-            this.txtRegisterPassword.Location = new System.Drawing.Point(34, 225);
+            this.txtRegisterPassword.Location = new System.Drawing.Point(34, 213);
             this.txtRegisterPassword.Name = "txtRegisterPassword";
             this.txtRegisterPassword.Parmida_ActivePlusMultiKeys = false;
-            this.txtRegisterPassword.Properties.Appearance.Font = new System.Drawing.Font("B Nazanin", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.txtRegisterPassword.Properties.Appearance.Font = new System.Drawing.Font("B Nazanin", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.txtRegisterPassword.Properties.Appearance.Options.UseFont = true;
             this.txtRegisterPassword.Properties.Appearance.Options.UseTextOptions = true;
             this.txtRegisterPassword.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
@@ -162,16 +265,16 @@
             this.txtRegisterPassword.Properties.AppearanceReadOnly.Options.UseTextOptions = true;
             this.txtRegisterPassword.Properties.AppearanceReadOnly.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.txtRegisterPassword.Properties.PasswordChar = '*';
-            this.txtRegisterPassword.Size = new System.Drawing.Size(269, 36);
+            this.txtRegisterPassword.Size = new System.Drawing.Size(269, 32);
             this.txtRegisterPassword.TabIndex = 12;
             // 
             // labelControl6
             // 
-            this.labelControl6.Appearance.Font = new System.Drawing.Font("B Nazanin", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.labelControl6.Appearance.Font = new System.Drawing.Font("B Nazanin", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.labelControl6.Appearance.ForeColor = System.Drawing.Color.White;
-            this.labelControl6.Location = new System.Drawing.Point(342, 226);
+            this.labelControl6.Location = new System.Drawing.Point(349, 217);
             this.labelControl6.Name = "labelControl6";
-            this.labelControl6.Size = new System.Drawing.Size(61, 33);
+            this.labelControl6.Size = new System.Drawing.Size(44, 24);
             this.labelControl6.TabIndex = 4;
             this.labelControl6.Text = "گذر واژه";
             // 
@@ -179,10 +282,10 @@
             // 
             this.txtFamily.EditValue = "";
             this.txtFamily.EnterMoveNextControl = true;
-            this.txtFamily.Location = new System.Drawing.Point(34, 144);
+            this.txtFamily.Location = new System.Drawing.Point(34, 137);
             this.txtFamily.Name = "txtFamily";
             this.txtFamily.Parmida_ActivePlusMultiKeys = false;
-            this.txtFamily.Properties.Appearance.Font = new System.Drawing.Font("B Nazanin", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.txtFamily.Properties.Appearance.Font = new System.Drawing.Font("B Nazanin", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.txtFamily.Properties.Appearance.Options.UseFont = true;
             this.txtFamily.Properties.Appearance.Options.UseTextOptions = true;
             this.txtFamily.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
@@ -192,17 +295,17 @@
             this.txtFamily.Properties.AppearanceFocused.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.txtFamily.Properties.AppearanceReadOnly.Options.UseTextOptions = true;
             this.txtFamily.Properties.AppearanceReadOnly.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.txtFamily.Size = new System.Drawing.Size(269, 36);
+            this.txtFamily.Size = new System.Drawing.Size(269, 32);
             this.txtFamily.TabIndex = 10;
             // 
             // txtRegisterUsername
             // 
             this.txtRegisterUsername.EditValue = "";
             this.txtRegisterUsername.EnterMoveNextControl = true;
-            this.txtRegisterUsername.Location = new System.Drawing.Point(34, 183);
+            this.txtRegisterUsername.Location = new System.Drawing.Point(34, 175);
             this.txtRegisterUsername.Name = "txtRegisterUsername";
             this.txtRegisterUsername.Parmida_ActivePlusMultiKeys = false;
-            this.txtRegisterUsername.Properties.Appearance.Font = new System.Drawing.Font("B Nazanin", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.txtRegisterUsername.Properties.Appearance.Font = new System.Drawing.Font("B Nazanin", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.txtRegisterUsername.Properties.Appearance.Options.UseFont = true;
             this.txtRegisterUsername.Properties.Appearance.Options.UseTextOptions = true;
             this.txtRegisterUsername.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
@@ -212,26 +315,26 @@
             this.txtRegisterUsername.Properties.AppearanceFocused.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.txtRegisterUsername.Properties.AppearanceReadOnly.Options.UseTextOptions = true;
             this.txtRegisterUsername.Properties.AppearanceReadOnly.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.txtRegisterUsername.Size = new System.Drawing.Size(269, 36);
+            this.txtRegisterUsername.Size = new System.Drawing.Size(269, 32);
             this.txtRegisterUsername.TabIndex = 11;
             // 
             // labelControl2
             // 
-            this.labelControl2.Appearance.Font = new System.Drawing.Font("B Nazanin", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.labelControl2.Appearance.Font = new System.Drawing.Font("B Nazanin", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.labelControl2.Appearance.ForeColor = System.Drawing.Color.White;
-            this.labelControl2.Location = new System.Drawing.Point(312, 145);
+            this.labelControl2.Location = new System.Drawing.Point(328, 141);
             this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(91, 33);
+            this.labelControl2.Size = new System.Drawing.Size(65, 24);
             this.labelControl2.TabIndex = 4;
             this.labelControl2.Text = "نام خانوادگی";
             // 
             // labelControl5
             // 
-            this.labelControl5.Appearance.Font = new System.Drawing.Font("B Nazanin", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.labelControl5.Appearance.Font = new System.Drawing.Font("B Nazanin", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.labelControl5.Appearance.ForeColor = System.Drawing.Color.White;
-            this.labelControl5.Location = new System.Drawing.Point(328, 184);
+            this.labelControl5.Location = new System.Drawing.Point(340, 179);
             this.labelControl5.Name = "labelControl5";
-            this.labelControl5.Size = new System.Drawing.Size(75, 33);
+            this.labelControl5.Size = new System.Drawing.Size(53, 24);
             this.labelControl5.TabIndex = 5;
             this.labelControl5.Text = "نام کاربری";
             // 
@@ -242,7 +345,7 @@
             this.txtName.Location = new System.Drawing.Point(34, 102);
             this.txtName.Name = "txtName";
             this.txtName.Parmida_ActivePlusMultiKeys = false;
-            this.txtName.Properties.Appearance.Font = new System.Drawing.Font("B Nazanin", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.txtName.Properties.Appearance.Font = new System.Drawing.Font("B Nazanin", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.txtName.Properties.Appearance.Options.UseFont = true;
             this.txtName.Properties.Appearance.Options.UseTextOptions = true;
             this.txtName.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
@@ -252,23 +355,23 @@
             this.txtName.Properties.AppearanceFocused.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.txtName.Properties.AppearanceReadOnly.Options.UseTextOptions = true;
             this.txtName.Properties.AppearanceReadOnly.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.txtName.Size = new System.Drawing.Size(269, 36);
+            this.txtName.Size = new System.Drawing.Size(269, 32);
             this.txtName.TabIndex = 9;
             // 
             // labelControl3
             // 
-            this.labelControl3.Appearance.Font = new System.Drawing.Font("B Nazanin", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.labelControl3.Appearance.Font = new System.Drawing.Font("B Nazanin", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.labelControl3.Appearance.ForeColor = System.Drawing.Color.White;
-            this.labelControl3.Location = new System.Drawing.Point(383, 105);
+            this.labelControl3.Location = new System.Drawing.Point(379, 106);
             this.labelControl3.Name = "labelControl3";
-            this.labelControl3.Size = new System.Drawing.Size(20, 33);
+            this.labelControl3.Size = new System.Drawing.Size(14, 24);
             this.labelControl3.TabIndex = 5;
             this.labelControl3.Text = "نام";
             // 
             // btnRegisterUser
             // 
             this.btnRegisterUser.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(152)))), ((int)(((byte)(219)))));
-            this.btnRegisterUser.Appearance.Font = new System.Drawing.Font("B Titr", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.btnRegisterUser.Appearance.Font = new System.Drawing.Font("B Titr", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.btnRegisterUser.Appearance.ForeColor = System.Drawing.Color.White;
             this.btnRegisterUser.Appearance.Options.UseBackColor = true;
             this.btnRegisterUser.Appearance.Options.UseFont = true;
@@ -278,9 +381,9 @@
             this.btnRegisterUser.AppearancePressed.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(232)))), ((int)(((byte)(129)))));
             this.btnRegisterUser.AppearancePressed.Options.UseBackColor = true;
             this.btnRegisterUser.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.btnRegisterUser.Location = new System.Drawing.Point(34, 322);
+            this.btnRegisterUser.Location = new System.Drawing.Point(130, 406);
             this.btnRegisterUser.Name = "btnRegisterUser";
-            this.btnRegisterUser.Size = new System.Drawing.Size(269, 40);
+            this.btnRegisterUser.Size = new System.Drawing.Size(90, 30);
             this.btnRegisterUser.TabIndex = 14;
             this.btnRegisterUser.Text = "ثبت نام";
             this.btnRegisterUser.Click += new System.EventHandler(this.btnRegisterUser_Click);
@@ -288,7 +391,7 @@
             // btnCancel
             // 
             this.btnCancel.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(128)))), ((int)(((byte)(147)))));
-            this.btnCancel.Appearance.Font = new System.Drawing.Font("B Titr", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.btnCancel.Appearance.Font = new System.Drawing.Font("B Titr", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.btnCancel.Appearance.ForeColor = System.Drawing.Color.White;
             this.btnCancel.Appearance.Options.UseBackColor = true;
             this.btnCancel.Appearance.Options.UseFont = true;
@@ -298,9 +401,9 @@
             this.btnCancel.AppearancePressed.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(232)))), ((int)(((byte)(129)))));
             this.btnCancel.AppearancePressed.Options.UseBackColor = true;
             this.btnCancel.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.btnCancel.Location = new System.Drawing.Point(34, 368);
+            this.btnCancel.Location = new System.Drawing.Point(34, 406);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(269, 40);
+            this.btnCancel.Size = new System.Drawing.Size(90, 30);
             this.btnCancel.TabIndex = 15;
             this.btnCancel.Text = "انصراف";
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
@@ -328,6 +431,7 @@
             // 
             // navigationPageLogin
             // 
+            this.navigationPageLogin.Caption = "navigationPageLogin";
             this.navigationPageLogin.Controls.Add(this.txtPassword);
             this.navigationPageLogin.Controls.Add(this.lblPassword);
             this.navigationPageLogin.Controls.Add(this.txtUsername);
@@ -336,16 +440,16 @@
             this.navigationPageLogin.Controls.Add(this.btnLogin);
             this.navigationPageLogin.Controls.Add(this.panelControl1);
             this.navigationPageLogin.Name = "navigationPageLogin";
-            this.navigationPageLogin.Size = new System.Drawing.Size(436, 440);
+            this.navigationPageLogin.Size = new System.Drawing.Size(436, 448);
             // 
             // txtPassword
             // 
             this.txtPassword.EditValue = "";
             this.txtPassword.EnterMoveNextControl = true;
-            this.txtPassword.Location = new System.Drawing.Point(53, 205);
+            this.txtPassword.Location = new System.Drawing.Point(59, 224);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Parmida_ActivePlusMultiKeys = false;
-            this.txtPassword.Properties.Appearance.Font = new System.Drawing.Font("B Nazanin", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.txtPassword.Properties.Appearance.Font = new System.Drawing.Font("B Nazanin", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.txtPassword.Properties.Appearance.Options.UseFont = true;
             this.txtPassword.Properties.Appearance.Options.UseTextOptions = true;
             this.txtPassword.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
@@ -356,16 +460,16 @@
             this.txtPassword.Properties.AppearanceReadOnly.Options.UseTextOptions = true;
             this.txtPassword.Properties.AppearanceReadOnly.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.txtPassword.Properties.PasswordChar = '*';
-            this.txtPassword.Size = new System.Drawing.Size(269, 36);
+            this.txtPassword.Size = new System.Drawing.Size(269, 32);
             this.txtPassword.TabIndex = 2;
             // 
             // lblPassword
             // 
-            this.lblPassword.Appearance.Font = new System.Drawing.Font("B Nazanin", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.lblPassword.Appearance.Font = new System.Drawing.Font("B Nazanin", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.lblPassword.Appearance.ForeColor = System.Drawing.Color.White;
-            this.lblPassword.Location = new System.Drawing.Point(347, 206);
+            this.lblPassword.Location = new System.Drawing.Point(353, 227);
             this.lblPassword.Name = "lblPassword";
-            this.lblPassword.Size = new System.Drawing.Size(61, 33);
+            this.lblPassword.Size = new System.Drawing.Size(45, 26);
             this.lblPassword.TabIndex = 1;
             this.lblPassword.Text = "گذر واژه";
             // 
@@ -373,10 +477,10 @@
             // 
             this.txtUsername.EditValue = "";
             this.txtUsername.EnterMoveNextControl = true;
-            this.txtUsername.Location = new System.Drawing.Point(53, 163);
+            this.txtUsername.Location = new System.Drawing.Point(59, 186);
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Parmida_ActivePlusMultiKeys = false;
-            this.txtUsername.Properties.Appearance.Font = new System.Drawing.Font("B Nazanin", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.txtUsername.Properties.Appearance.Font = new System.Drawing.Font("B Nazanin", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.txtUsername.Properties.Appearance.Options.UseFont = true;
             this.txtUsername.Properties.Appearance.Options.UseTextOptions = true;
             this.txtUsername.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
@@ -386,16 +490,16 @@
             this.txtUsername.Properties.AppearanceFocused.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.txtUsername.Properties.AppearanceReadOnly.Options.UseTextOptions = true;
             this.txtUsername.Properties.AppearanceReadOnly.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.txtUsername.Size = new System.Drawing.Size(269, 36);
+            this.txtUsername.Size = new System.Drawing.Size(269, 32);
             this.txtUsername.TabIndex = 1;
             // 
             // lblUsername
             // 
-            this.lblUsername.Appearance.Font = new System.Drawing.Font("B Nazanin", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.lblUsername.Appearance.Font = new System.Drawing.Font("B Nazanin", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.lblUsername.Appearance.ForeColor = System.Drawing.Color.White;
-            this.lblUsername.Location = new System.Drawing.Point(347, 164);
+            this.lblUsername.Location = new System.Drawing.Point(352, 189);
             this.lblUsername.Name = "lblUsername";
-            this.lblUsername.Size = new System.Drawing.Size(61, 33);
+            this.lblUsername.Size = new System.Drawing.Size(46, 26);
             this.lblUsername.TabIndex = 1;
             this.lblUsername.Text = "نام کاربر";
             // 
@@ -412,7 +516,7 @@
             this.btnRegister.AppearancePressed.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(232)))), ((int)(((byte)(129)))));
             this.btnRegister.AppearancePressed.Options.UseBackColor = true;
             this.btnRegister.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.btnRegister.Location = new System.Drawing.Point(53, 309);
+            this.btnRegister.Location = new System.Drawing.Point(59, 332);
             this.btnRegister.Name = "btnRegister";
             this.btnRegister.Size = new System.Drawing.Size(269, 40);
             this.btnRegister.TabIndex = 4;
@@ -432,7 +536,7 @@
             this.btnLogin.AppearancePressed.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(232)))), ((int)(((byte)(129)))));
             this.btnLogin.AppearancePressed.Options.UseBackColor = true;
             this.btnLogin.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.btnLogin.Location = new System.Drawing.Point(53, 263);
+            this.btnLogin.Location = new System.Drawing.Point(59, 286);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(269, 40);
             this.btnLogin.TabIndex = 3;
@@ -468,7 +572,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(436, 440);
+            this.ClientSize = new System.Drawing.Size(436, 448);
             this.Controls.Add(this.navigationFrame);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -482,7 +586,11 @@
             this.navigationFrame.ResumeLayout(false);
             this.navigationPageRegister.ResumeLayout(false);
             this.navigationPageRegister.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtCommand.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtEmail.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.comboBod.Properties.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.comboBod.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtMobile.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtRegisterPassword.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtFamily.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtRegisterUsername.Properties)).EndInit();
@@ -526,12 +634,18 @@
         private DevExpress.XtraEditors.SimpleButton btnCancel;
         private DevExpress.XtraEditors.PanelControl panelControl2;
         private DevExpress.XtraEditors.LabelControl labelControl4;
-        private DevExpress.XtraEditors.TextEdit txtEmail;
-        private DevExpress.XtraEditors.LabelControl labelControl7;
+        private DevExpress.XtraEditors.LabelControl lblDob;
         private DevExpress.XtraEditors.TextEdit txtRegisterPassword;
         private DevExpress.XtraEditors.LabelControl labelControl6;
         private DevExpress.XtraEditors.TextEdit txtRegisterUsername;
         private DevExpress.XtraEditors.LabelControl labelControl5;
+        private DevExpress.XtraEditors.TextEdit txtCommand;
+        private DevExpress.XtraEditors.LabelControl lblCommand;
+        private DevExpress.XtraEditors.TextEdit txtEmail;
+        private DevExpress.XtraEditors.LabelControl lblEmail;
+        private DevExpress.XtraEditors.DateEdit comboBod;
+        private DevExpress.XtraEditors.TextEdit txtMobile;
+        private DevExpress.XtraEditors.LabelControl lblMobile;
     }
 }
 

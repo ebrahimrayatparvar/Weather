@@ -18,6 +18,8 @@ namespace _01_Weather.Core.User
         [MaxLength(30)]
         public string Password { get; set; }
         public DateTime Bod { get; set; }
+        [MaxLength(10)]
+        public string BodPersion { get; set; }
         [MaxLength(11)]
         public string Mobile { get; set; }
         [MaxLength(40)]
