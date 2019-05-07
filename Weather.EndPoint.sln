@@ -17,7 +17,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "02-Weather.Contracts", "02-
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "03-Weather.Service", "03-Weather.Service\03-Weather.Service.csproj", "{C877E051-93D4-4D6A-B9E3-B2D101E6D4E4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EfRipositpry", "EfRipositpry\EfRipositpry.csproj", "{85C1642D-5A5A-45C2-9D85-D5FE9517CCD6}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04-EfRipositpry", "EfRipositpry\04-EfRipositpry.csproj", "{85C1642D-5A5A-45C2-9D85-D5FE9517CCD6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

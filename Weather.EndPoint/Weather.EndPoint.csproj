@@ -242,9 +242,9 @@
       <Project>{C877E051-93D4-4D6A-B9E3-B2D101E6D4E4}</Project>
       <Name>03-Weather.Service</Name>
     </ProjectReference>
-    <ProjectReference Include="..\EfRipositpry\EfRipositpry.csproj">
+    <ProjectReference Include="..\EfRipositpry\04-EfRipositpry.csproj">
       <Project>{85C1642D-5A5A-45C2-9D85-D5FE9517CCD6}</Project>
-      <Name>EfRipositpry</Name>
+      <Name>04-EfRipositpry</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
