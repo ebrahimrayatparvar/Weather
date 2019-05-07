@@ -121,6 +121,7 @@ namespace Weather.EndPoint.Forms
         {
             var result = openWeatherMapApi.GetApiResult(cityName, _apiKey);
             lblCity.Text = Properties.Settings.Default.CityNamePersion;
+            lblCityMain.Text = Properties.Settings.Default.CityNamePersion;
             lblLat.Text = result.coord.lat;
             lblLng.Text = result.coord.lon;
             lblTemp.Text = GetWeatherImage.ConvertKelvinToCantigerad(result.main.temp);

@@ -37,6 +37,10 @@
             this.barBtnEditUser = new DevExpress.XtraBars.BarButtonItem();
             this.bar3 = new DevExpress.XtraBars.Bar();
             this.barStaticTime = new DevExpress.XtraBars.BarStaticItem();
+            this.barStaticItem1 = new DevExpress.XtraBars.BarStaticItem();
+            this.barStaticItem2 = new DevExpress.XtraBars.BarStaticItem();
+            this.barStaticItem3 = new DevExpress.XtraBars.BarStaticItem();
+            this.barStaticItem4 = new DevExpress.XtraBars.BarStaticItem();
             this.barDockControlTop = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
@@ -47,7 +51,7 @@
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.panelRowWeather = new DevExpress.XtraEditors.PanelControl();
-            this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
+            this.lblCityMain = new DevExpress.XtraEditors.LabelControl();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.picWeather = new DevExpress.XtraEditors.PictureEdit();
             this.lblUserName = new DevExpress.XtraEditors.LabelControl();
@@ -74,10 +78,6 @@
             this.lblCity = new DevExpress.XtraEditors.LabelControl();
             this.timerWeather = new System.Windows.Forms.Timer(this.components);
             this.imageCollectionWeather = new DevExpress.Utils.ImageCollection(this.components);
-            this.barStaticItem1 = new DevExpress.XtraBars.BarStaticItem();
-            this.barStaticItem2 = new DevExpress.XtraBars.BarStaticItem();
-            this.barStaticItem3 = new DevExpress.XtraBars.BarStaticItem();
-            this.barStaticItem4 = new DevExpress.XtraBars.BarStaticItem();
             ((System.ComponentModel.ISupportInitialize)(this.barManagerWeather)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
@@ -161,6 +161,34 @@
             this.barStaticTime.Id = 1;
             this.barStaticTime.Name = "barStaticTime";
             this.barStaticTime.TextAlignment = System.Drawing.StringAlignment.Near;
+            // 
+            // barStaticItem1
+            // 
+            this.barStaticItem1.Caption = "                       ";
+            this.barStaticItem1.Id = 5;
+            this.barStaticItem1.Name = "barStaticItem1";
+            this.barStaticItem1.TextAlignment = System.Drawing.StringAlignment.Near;
+            // 
+            // barStaticItem2
+            // 
+            this.barStaticItem2.Caption = "ابراهیم رعیت پرور تلوکی         ebrahim rayatparvar talooki";
+            this.barStaticItem2.Id = 6;
+            this.barStaticItem2.Name = "barStaticItem2";
+            this.barStaticItem2.TextAlignment = System.Drawing.StringAlignment.Near;
+            // 
+            // barStaticItem3
+            // 
+            this.barStaticItem3.Caption = "                       ";
+            this.barStaticItem3.Id = 7;
+            this.barStaticItem3.Name = "barStaticItem3";
+            this.barStaticItem3.TextAlignment = System.Drawing.StringAlignment.Near;
+            // 
+            // barStaticItem4
+            // 
+            this.barStaticItem4.Caption = "Github Address : https://github.com/ebrahimrayatparvar/Weather";
+            this.barStaticItem4.Id = 8;
+            this.barStaticItem4.Name = "barStaticItem4";
+            this.barStaticItem4.TextAlignment = System.Drawing.StringAlignment.Near;
             // 
             // barDockControlTop
             // 
@@ -247,15 +275,14 @@
             this.panelRowWeather.Size = new System.Drawing.Size(622, 487);
             this.panelRowWeather.TabIndex = 5;
             // 
-            // labelControl2
+            // lblCityMain
             // 
-            this.labelControl2.Appearance.Font = new System.Drawing.Font("B Nazanin", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.labelControl2.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.labelControl2.Location = new System.Drawing.Point(324, 67);
-            this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(183, 30);
-            this.labelControl2.TabIndex = 10;
-            this.labelControl2.Text = "چهار محال بختیاری";
+            this.lblCityMain.Appearance.Font = new System.Drawing.Font("B Nazanin", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.lblCityMain.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
+            this.lblCityMain.Location = new System.Drawing.Point(324, 67);
+            this.lblCityMain.Name = "lblCityMain";
+            this.lblCityMain.Size = new System.Drawing.Size(183, 30);
+            this.lblCityMain.TabIndex = 10;
             // 
             // labelControl3
             // 
@@ -549,34 +576,6 @@
             this.imageCollectionWeather.InsertGalleryImage("geopoint_16x16.png", "images/maps/geopoint_16x16.png", DevExpress.Images.ImageResourceCache.Default.GetImage("images/maps/geopoint_16x16.png"), 0);
             this.imageCollectionWeather.Images.SetKeyName(0, "geopoint_16x16.png");
             // 
-            // barStaticItem1
-            // 
-            this.barStaticItem1.Caption = "                       ";
-            this.barStaticItem1.Id = 5;
-            this.barStaticItem1.Name = "barStaticItem1";
-            this.barStaticItem1.TextAlignment = System.Drawing.StringAlignment.Near;
-            // 
-            // barStaticItem2
-            // 
-            this.barStaticItem2.Caption = "ابراهیم رعیت پرور تلوکی         ebrahim rayatparvar talooki";
-            this.barStaticItem2.Id = 6;
-            this.barStaticItem2.Name = "barStaticItem2";
-            this.barStaticItem2.TextAlignment = System.Drawing.StringAlignment.Near;
-            // 
-            // barStaticItem3
-            // 
-            this.barStaticItem3.Caption = "                       ";
-            this.barStaticItem3.Id = 7;
-            this.barStaticItem3.Name = "barStaticItem3";
-            this.barStaticItem3.TextAlignment = System.Drawing.StringAlignment.Near;
-            // 
-            // barStaticItem4
-            // 
-            this.barStaticItem4.Caption = "Github Address : https://github.com/ebrahimrayatparvar/Weather";
-            this.barStaticItem4.Id = 8;
-            this.barStaticItem4.Name = "barStaticItem4";
-            this.barStaticItem4.TextAlignment = System.Drawing.StringAlignment.Near;
-            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -587,7 +586,7 @@
             this.Controls.Add(this.lblUserName);
             this.Controls.Add(this.picWeather);
             this.Controls.Add(this.labelControl3);
-            this.Controls.Add(this.labelControl2);
+            this.Controls.Add(this.lblCityMain);
             this.Controls.Add(this.panelRowWeather);
             this.Controls.Add(this.panelControl1);
             this.Controls.Add(this.barDockControlLeft);
@@ -629,7 +628,7 @@
         private DevExpress.XtraEditors.PanelControl panelControl1;
         private DevExpress.XtraEditors.LabelControl labelControl1;
         private DevExpress.XtraEditors.LabelControl labelControl3;
-        private DevExpress.XtraEditors.LabelControl labelControl2;
+        private DevExpress.XtraEditors.LabelControl lblCityMain;
         private DevExpress.XtraEditors.XtraScrollableControl scrollBar;
         private DevExpress.XtraEditors.PictureEdit picWeather;
         private DevExpress.XtraEditors.LabelControl lblDayName;
