@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Windows.Forms;
 using Weather.EndPoint.Class;
+using Weather.EndPoint.Class.Enum;
 using Weather.EndPoint.Class.Model;
 using Weather.EndPoint.UserControl;
 
@@ -74,34 +75,7 @@ namespace Weather.EndPoint.Forms
         private string GetDayName()
         {
             DateTime dt = DateTime.Now;
-            var str = string.Empty;
-            switch (dt.DayOfWeek)
-            {
-                case DayOfWeek.Sunday:
-                    str = "یکشنبه";
-                    break;
-                case DayOfWeek.Monday:
-                    str = "دوشنبه";
-                    break;
-                case DayOfWeek.Tuesday:
-                    str = "سه شنبه";
-                    break;
-                case DayOfWeek.Wednesday:
-                    str = "چهار شنبه";
-                    break;
-                case DayOfWeek.Thursday:
-                    str = "پنج شنبه";
-                    break;
-                case DayOfWeek.Friday:
-                    str = "جمعه";
-                    break;
-                case DayOfWeek.Saturday:
-                    str = "شنبه";
-                    break;
-                default:
-                    break;
-            }
-            return str;
+            return ((DayOfWeekPersion)(int)dt.DayOfWeek).ToString();            
         }
         #endregion
         

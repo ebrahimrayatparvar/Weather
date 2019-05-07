@@ -1,9 +1,6 @@
 ﻿using _01_Weather.Core.ApiModel;
 using Newtonsoft.Json;
-using System;
-using System.Collections.Generic;
 using System.Net;
-using System.Text;
 
 namespace _03_Weather.Service.OpenWeatherMap
 {

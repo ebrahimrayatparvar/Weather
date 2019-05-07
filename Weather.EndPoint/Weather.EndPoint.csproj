@@ -160,6 +160,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Class\Enum\DayOfWeekPersion.cs" />
     <Compile Include="Class\GetWeatherImage.cs" />
     <Compile Include="Class\Model\CityModel.cs" />
     <Compile Include="Forms\EditUser.cs">
