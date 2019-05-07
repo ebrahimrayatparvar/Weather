@@ -51,16 +51,18 @@
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.picWeather = new DevExpress.XtraEditors.PictureEdit();
             this.lblUserName = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
+            this.lblDayName = new DevExpress.XtraEditors.LabelControl();
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
+            this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
+            this.lblSunset = new DevExpress.XtraEditors.LabelControl();
             this.lblTemp = new DevExpress.XtraEditors.LabelControl();
             this.lblDescription = new DevExpress.XtraEditors.LabelControl();
             this.lblLat = new DevExpress.XtraEditors.LabelControl();
             this.lblHumidity = new DevExpress.XtraEditors.LabelControl();
             this.labelControl20 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl11 = new DevExpress.XtraEditors.LabelControl();
+            this.lbl2 = new DevExpress.XtraEditors.LabelControl();
             this.lblSpeed = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl13 = new DevExpress.XtraEditors.LabelControl();
+            this.lblSunrise = new DevExpress.XtraEditors.LabelControl();
             this.label = new DevExpress.XtraEditors.LabelControl();
             this.labelControl10 = new DevExpress.XtraEditors.LabelControl();
             this.lblLng = new DevExpress.XtraEditors.LabelControl();
@@ -72,6 +74,10 @@
             this.lblCity = new DevExpress.XtraEditors.LabelControl();
             this.timerWeather = new System.Windows.Forms.Timer(this.components);
             this.imageCollectionWeather = new DevExpress.Utils.ImageCollection(this.components);
+            this.barStaticItem1 = new DevExpress.XtraBars.BarStaticItem();
+            this.barStaticItem2 = new DevExpress.XtraBars.BarStaticItem();
+            this.barStaticItem3 = new DevExpress.XtraBars.BarStaticItem();
+            this.barStaticItem4 = new DevExpress.XtraBars.BarStaticItem();
             ((System.ComponentModel.ISupportInitialize)(this.barManagerWeather)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
@@ -101,8 +107,12 @@
             this.barHeaderItem1,
             this.barStaticTime,
             this.barBtnEditUser,
-            this.barBtnFavoritesCity});
-            this.barManagerWeather.MaxItemId = 5;
+            this.barBtnFavoritesCity,
+            this.barStaticItem1,
+            this.barStaticItem2,
+            this.barStaticItem3,
+            this.barStaticItem4});
+            this.barManagerWeather.MaxItemId = 9;
             this.barManagerWeather.RightToLeft = DevExpress.Utils.DefaultBoolean.True;
             this.barManagerWeather.StatusBar = this.bar3;
             // 
@@ -135,7 +145,11 @@
             this.bar3.DockRow = 0;
             this.bar3.DockStyle = DevExpress.XtraBars.BarDockStyle.Bottom;
             this.bar3.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
-            new DevExpress.XtraBars.LinkPersistInfo(this.barStaticTime)});
+            new DevExpress.XtraBars.LinkPersistInfo(this.barStaticTime),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barStaticItem1),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barStaticItem2),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barStaticItem3),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barStaticItem4)});
             this.bar3.OptionsBar.AllowQuickCustomization = false;
             this.bar3.OptionsBar.DrawDragBorder = false;
             this.bar3.OptionsBar.UseWholeRow = true;
@@ -279,27 +293,29 @@
             this.lblUserName.TabIndex = 21;
             this.lblUserName.Text = "ابراهیم رعیت پرور تلوکی";
             // 
-            // labelControl5
+            // lblDayName
             // 
-            this.labelControl5.Appearance.Font = new System.Drawing.Font("B Nazanin", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.labelControl5.Appearance.ForeColor = System.Drawing.Color.Silver;
-            this.labelControl5.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.labelControl5.Location = new System.Drawing.Point(273, 167);
-            this.labelControl5.Name = "labelControl5";
-            this.labelControl5.Size = new System.Drawing.Size(234, 30);
-            this.labelControl5.TabIndex = 22;
-            this.labelControl5.Text = "Admin";
+            this.lblDayName.Appearance.Font = new System.Drawing.Font("B Nazanin", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.lblDayName.Appearance.ForeColor = System.Drawing.Color.Silver;
+            this.lblDayName.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
+            this.lblDayName.Location = new System.Drawing.Point(273, 167);
+            this.lblDayName.Name = "lblDayName";
+            this.lblDayName.Size = new System.Drawing.Size(234, 30);
+            this.lblDayName.TabIndex = 22;
+            this.lblDayName.Text = "Admin";
             // 
             // panelControl2
             // 
+            this.panelControl2.Controls.Add(this.labelControl4);
+            this.panelControl2.Controls.Add(this.lblSunset);
             this.panelControl2.Controls.Add(this.lblTemp);
             this.panelControl2.Controls.Add(this.lblDescription);
             this.panelControl2.Controls.Add(this.lblLat);
             this.panelControl2.Controls.Add(this.lblHumidity);
             this.panelControl2.Controls.Add(this.labelControl20);
-            this.panelControl2.Controls.Add(this.labelControl11);
+            this.panelControl2.Controls.Add(this.lbl2);
             this.panelControl2.Controls.Add(this.lblSpeed);
-            this.panelControl2.Controls.Add(this.labelControl13);
+            this.panelControl2.Controls.Add(this.lblSunrise);
             this.panelControl2.Controls.Add(this.label);
             this.panelControl2.Controls.Add(this.labelControl10);
             this.panelControl2.Controls.Add(this.lblLng);
@@ -313,6 +329,27 @@
             this.panelControl2.Name = "panelControl2";
             this.panelControl2.Size = new System.Drawing.Size(445, 341);
             this.panelControl2.TabIndex = 27;
+            // 
+            // labelControl4
+            // 
+            this.labelControl4.Appearance.Font = new System.Drawing.Font("B Nazanin", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.labelControl4.Appearance.ForeColor = System.Drawing.Color.Silver;
+            this.labelControl4.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
+            this.labelControl4.Location = new System.Drawing.Point(354, 295);
+            this.labelControl4.Name = "labelControl4";
+            this.labelControl4.Size = new System.Drawing.Size(69, 30);
+            this.labelControl4.TabIndex = 20;
+            this.labelControl4.Text = "غروب آفتاب :";
+            // 
+            // lblSunset
+            // 
+            this.lblSunset.Appearance.Font = new System.Drawing.Font("B Nazanin", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.lblSunset.Appearance.ForeColor = System.Drawing.Color.Silver;
+            this.lblSunset.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
+            this.lblSunset.Location = new System.Drawing.Point(211, 295);
+            this.lblSunset.Name = "lblSunset";
+            this.lblSunset.Size = new System.Drawing.Size(137, 30);
+            this.lblSunset.TabIndex = 19;
             // 
             // lblTemp
             // 
@@ -349,9 +386,9 @@
             this.lblHumidity.Appearance.Font = new System.Drawing.Font("B Nazanin", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.lblHumidity.Appearance.ForeColor = System.Drawing.Color.Silver;
             this.lblHumidity.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.lblHumidity.Location = new System.Drawing.Point(199, 245);
+            this.lblHumidity.Location = new System.Drawing.Point(20, 90);
             this.lblHumidity.Name = "lblHumidity";
-            this.lblHumidity.Size = new System.Drawing.Size(149, 30);
+            this.lblHumidity.Size = new System.Drawing.Size(98, 30);
             this.lblHumidity.TabIndex = 18;
             // 
             // labelControl20
@@ -365,16 +402,16 @@
             this.labelControl20.TabIndex = 17;
             this.labelControl20.Text = "سرعت باد :";
             // 
-            // labelControl11
+            // lbl2
             // 
-            this.labelControl11.Appearance.Font = new System.Drawing.Font("B Nazanin", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.labelControl11.Appearance.ForeColor = System.Drawing.Color.Silver;
-            this.labelControl11.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.labelControl11.Location = new System.Drawing.Point(124, 90);
-            this.labelControl11.Name = "labelControl11";
-            this.labelControl11.Size = new System.Drawing.Size(69, 30);
-            this.labelControl11.TabIndex = 17;
-            this.labelControl11.Text = "دمای شب : ";
+            this.lbl2.Appearance.Font = new System.Drawing.Font("B Nazanin", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.lbl2.Appearance.ForeColor = System.Drawing.Color.Silver;
+            this.lbl2.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
+            this.lbl2.Location = new System.Drawing.Point(124, 249);
+            this.lbl2.Name = "lbl2";
+            this.lbl2.Size = new System.Drawing.Size(69, 30);
+            this.lbl2.TabIndex = 17;
+            this.lbl2.Text = "طلوع آفتاب :";
             // 
             // lblSpeed
             // 
@@ -386,15 +423,15 @@
             this.lblSpeed.Size = new System.Drawing.Size(98, 30);
             this.lblSpeed.TabIndex = 15;
             // 
-            // labelControl13
+            // lblSunrise
             // 
-            this.labelControl13.Appearance.Font = new System.Drawing.Font("B Nazanin", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.labelControl13.Appearance.ForeColor = System.Drawing.Color.Silver;
-            this.labelControl13.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.labelControl13.Location = new System.Drawing.Point(20, 90);
-            this.labelControl13.Name = "labelControl13";
-            this.labelControl13.Size = new System.Drawing.Size(98, 30);
-            this.labelControl13.TabIndex = 15;
+            this.lblSunrise.Appearance.Font = new System.Drawing.Font("B Nazanin", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.lblSunrise.Appearance.ForeColor = System.Drawing.Color.Silver;
+            this.lblSunrise.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
+            this.lblSunrise.Location = new System.Drawing.Point(20, 249);
+            this.lblSunrise.Name = "lblSunrise";
+            this.lblSunrise.Size = new System.Drawing.Size(98, 30);
+            this.lblSunrise.TabIndex = 15;
             // 
             // label
             // 
@@ -433,9 +470,9 @@
             this.lblPressure.Appearance.Font = new System.Drawing.Font("B Nazanin", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.lblPressure.Appearance.ForeColor = System.Drawing.Color.Silver;
             this.lblPressure.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.lblPressure.Location = new System.Drawing.Point(20, 245);
+            this.lblPressure.Location = new System.Drawing.Point(211, 249);
             this.lblPressure.Name = "lblPressure";
-            this.lblPressure.Size = new System.Drawing.Size(98, 30);
+            this.lblPressure.Size = new System.Drawing.Size(137, 30);
             this.lblPressure.TabIndex = 15;
             // 
             // labelControl16
@@ -454,7 +491,7 @@
             this.labelControl8.Appearance.Font = new System.Drawing.Font("B Nazanin", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.labelControl8.Appearance.ForeColor = System.Drawing.Color.Silver;
             this.labelControl8.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.labelControl8.Location = new System.Drawing.Point(124, 245);
+            this.labelControl8.Location = new System.Drawing.Point(354, 249);
             this.labelControl8.Name = "labelControl8";
             this.labelControl8.Size = new System.Drawing.Size(69, 30);
             this.labelControl8.TabIndex = 14;
@@ -476,7 +513,7 @@
             this.labelControl7.Appearance.Font = new System.Drawing.Font("B Nazanin", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.labelControl7.Appearance.ForeColor = System.Drawing.Color.Silver;
             this.labelControl7.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.labelControl7.Location = new System.Drawing.Point(354, 245);
+            this.labelControl7.Location = new System.Drawing.Point(124, 90);
             this.labelControl7.Name = "labelControl7";
             this.labelControl7.Size = new System.Drawing.Size(69, 30);
             this.labelControl7.TabIndex = 13;
@@ -512,13 +549,41 @@
             this.imageCollectionWeather.InsertGalleryImage("geopoint_16x16.png", "images/maps/geopoint_16x16.png", DevExpress.Images.ImageResourceCache.Default.GetImage("images/maps/geopoint_16x16.png"), 0);
             this.imageCollectionWeather.Images.SetKeyName(0, "geopoint_16x16.png");
             // 
+            // barStaticItem1
+            // 
+            this.barStaticItem1.Caption = "                       ";
+            this.barStaticItem1.Id = 5;
+            this.barStaticItem1.Name = "barStaticItem1";
+            this.barStaticItem1.TextAlignment = System.Drawing.StringAlignment.Near;
+            // 
+            // barStaticItem2
+            // 
+            this.barStaticItem2.Caption = "ابراهیم رعیت پرور تلوکی         ebrahim rayatparvar talooki";
+            this.barStaticItem2.Id = 6;
+            this.barStaticItem2.Name = "barStaticItem2";
+            this.barStaticItem2.TextAlignment = System.Drawing.StringAlignment.Near;
+            // 
+            // barStaticItem3
+            // 
+            this.barStaticItem3.Caption = "                       ";
+            this.barStaticItem3.Id = 7;
+            this.barStaticItem3.Name = "barStaticItem3";
+            this.barStaticItem3.TextAlignment = System.Drawing.StringAlignment.Near;
+            // 
+            // barStaticItem4
+            // 
+            this.barStaticItem4.Caption = "Github Address : https://github.com/ebrahimrayatparvar/Weather";
+            this.barStaticItem4.Id = 8;
+            this.barStaticItem4.Name = "barStaticItem4";
+            this.barStaticItem4.TextAlignment = System.Drawing.StringAlignment.Near;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1184, 661);
             this.Controls.Add(this.panelControl2);
-            this.Controls.Add(this.labelControl5);
+            this.Controls.Add(this.lblDayName);
             this.Controls.Add(this.lblUserName);
             this.Controls.Add(this.picWeather);
             this.Controls.Add(this.labelControl3);
@@ -567,11 +632,11 @@
         private DevExpress.XtraEditors.LabelControl labelControl2;
         private DevExpress.XtraEditors.XtraScrollableControl scrollBar;
         private DevExpress.XtraEditors.PictureEdit picWeather;
-        private DevExpress.XtraEditors.LabelControl labelControl5;
+        private DevExpress.XtraEditors.LabelControl lblDayName;
         private DevExpress.XtraEditors.LabelControl lblUserName;
         private DevExpress.XtraEditors.PanelControl panelControl2;
         private DevExpress.XtraEditors.LabelControl lblHumidity;
-        private DevExpress.XtraEditors.LabelControl labelControl11;
+        private DevExpress.XtraEditors.LabelControl lbl2;
         private DevExpress.XtraEditors.LabelControl labelControl10;
         private DevExpress.XtraEditors.LabelControl lblPressure;
         private DevExpress.XtraEditors.LabelControl labelControl8;
@@ -582,7 +647,7 @@
         private System.Windows.Forms.Timer timerWeather;
         private DevExpress.XtraBars.BarButtonItem barBtnEditUser;
         private DevExpress.XtraEditors.LabelControl lblDescription;
-        private DevExpress.XtraEditors.LabelControl labelControl13;
+        private DevExpress.XtraEditors.LabelControl lblSunrise;
         private DevExpress.XtraBars.BarButtonItem barBtnFavoritesCity;
         private DevExpress.Utils.ImageCollection imageCollectionWeather;
         private DevExpress.XtraEditors.LabelControl lblTemp;
@@ -593,5 +658,11 @@
         private DevExpress.XtraEditors.LabelControl lblLng;
         private DevExpress.XtraEditors.LabelControl labelControl16;
         private DevExpress.XtraEditors.LabelControl labelControl15;
+        private DevExpress.XtraEditors.LabelControl labelControl4;
+        private DevExpress.XtraEditors.LabelControl lblSunset;
+        private DevExpress.XtraBars.BarStaticItem barStaticItem1;
+        private DevExpress.XtraBars.BarStaticItem barStaticItem2;
+        private DevExpress.XtraBars.BarStaticItem barStaticItem3;
+        private DevExpress.XtraBars.BarStaticItem barStaticItem4;
     }
 }

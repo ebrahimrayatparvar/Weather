@@ -149,9 +149,6 @@
     <EmbeddedResource Include="UserControl\RowWeather.resx">
       <DependentUpon>RowWeather.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="city.list.json">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
     <None Include="CityList.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
@@ -164,9 +161,6 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <None Include="test.json">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

@@ -145,15 +145,15 @@
             this.lblDegre.AppearancePressed.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.lblDegre.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
             this.lblDegre.Dock = System.Windows.Forms.DockStyle.Right;
-            this.lblDegre.Location = new System.Drawing.Point(142, 0);
+            this.lblDegre.Location = new System.Drawing.Point(113, 0);
             this.lblDegre.Name = "lblDegre";
-            this.lblDegre.Size = new System.Drawing.Size(45, 40);
+            this.lblDegre.Size = new System.Drawing.Size(74, 40);
             this.lblDegre.TabIndex = 5;
             this.lblDegre.Text = "25\'";
             // 
             // RowWeather
             // 
-            this.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
             this.Appearance.Options.UseForeColor = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;

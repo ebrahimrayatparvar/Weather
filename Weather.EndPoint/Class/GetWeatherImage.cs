@@ -9,6 +9,7 @@ namespace Weather.EndPoint.Class
 {
     public static class GetWeatherImage
     {
+        #region Get weather image
         public static Image GetImage(int id)
         {
             Image img = null; ;
@@ -184,6 +185,9 @@ namespace Weather.EndPoint.Class
             }
             return img;
         }
+        #endregion
+
+        #region get weather description today 
         public static string GetDescription(int id)
         {
             string str = null; 
@@ -359,5 +363,22 @@ namespace Weather.EndPoint.Class
             }
             return str;
         }
+        #endregion
+
+        #region Convert sunrise value and sunset value to time
+        public static string ConvertUnixToDateTime(double unixTime)
+        {
+            DateTime dt = new DateTime(1970, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc);
+            return dt.AddSeconds(unixTime).ToLocalTime().ToShortTimeString();
+        }
+        #endregion
+
+        #region Convert kelvin to cantigrad
+        public static string ConvertKelvinToCantigerad(double value)
+        {
+            return (value - 273.15).ToString();
+        }
+        #endregion
+
     }
 }

@@ -8,12 +8,16 @@ namespace Weather.EndPoint.Forms
 {
     public partial class LoginForm : XtraForm
     {
+        private EfUser _obj = new EfUser();
+
+        #region Constructor form loin
         public LoginForm()
         {
             InitializeComponent();
         }
+        #endregion
 
-        private EfUser _obj = new EfUser();
+        #region Button login to weather app
         private void btnLogin_Click(object sender, EventArgs e)
         {
             var bl = false;
@@ -59,12 +63,16 @@ namespace Weather.EndPoint.Forms
                 XtraMessageBox.Show("چنین نام کاربری در برنامه وجود ندارد.", "خطا در برنامه", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+        #endregion
 
+        #region Exit Weather app
         private void btnRegister_Click(object sender, EventArgs e)
         {
             navigationFrame.SelectedPage = navigationPageRegister;
         }
+        #endregion
 
+        #region Register new account
         private void btnRegisterUser_Click(object sender, EventArgs e)
         {
             var bl = false;
@@ -134,10 +142,14 @@ namespace Weather.EndPoint.Forms
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
             navigationFrame.SelectedPage = navigationPageLogin;
         }
+        #endregion
 
+        #region Cancel register new account
         private void btnCancel_Click(object sender, EventArgs e)
         {
             navigationFrame.SelectedPage = navigationPageLogin;
         }
+        #endregion
+
     }
 }

@@ -17,11 +17,16 @@ namespace Weather.EndPoint.Forms
     public partial class EditUser : XtraForm
     {
         private EfUser _db = new EfUser();
+        private int id;
+
+        #region Constructor form Edit User
         public EditUser()
         {
             InitializeComponent();
         }
-        private int id;
+        #endregion
+
+        #region Form load from edit user
         private void EditUser_Load(object sender, EventArgs e)
         {
             try
@@ -40,8 +45,6 @@ namespace Weather.EndPoint.Forms
                     txtFavoritesCity.Text = item.FavoritesCity;
                     txtCommand.Text = item.Command;
                 }
-
-
             }
             catch (SqlException ex)
             {
@@ -52,27 +55,28 @@ namespace Weather.EndPoint.Forms
                 XtraMessageBox.Show(ex.Message, "خطا در برنامه", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+        #endregion
 
+        #region Save button Edit user
         private void btnSave_Click(object sender, EventArgs e)
         {
             try
             {
-                var userInfo = new UserEntity
-                {
-                    Name = txtName.Text,
-                    family = txtFamily.Text,
-                    Username = txtUserName.Text,
-                    Password = txtPassword.Text,
-                    Bod = DateTime.Parse(ComboDob.EditValue.ToString()),
-                    BodPersion = ComboDob.Text,
-                    Email = txtEmail.Text,
-                    Mobile = txtMobile.Text,
-                    Command = txtCommand.Text,
-                    FavoritesCity = txtFavoritesCity.Text,
-                    UserId = id
-                };
+                var result = _db.GetUserInformation(Properties.Settings.Default.UserName);
 
-                _db.Edit(userInfo);
+                result[0].Name = txtName.Text;
+                result[0].family = txtFamily.Text;
+                result[0].Username = txtUserName.Text;
+                result[0].Password = txtPassword.Text;
+                result[0].Bod = DateTime.Parse(ComboDob.EditValue.ToString());
+                result[0].BodPersion = ComboDob.Text;
+                result[0].Email = txtEmail.Text;
+                result[0].Mobile = txtMobile.Text;
+                result[0].Command = txtCommand.Text;
+                result[0].FavoritesCity = txtFavoritesCity.Text;
+                result[0].UserId = id;
+                    
+                _db.Edit(result[0]);
                 XtraMessageBox.Show("ویرایش کاربر با موفقیت انجام شد.", "ویرایش موفق",
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
                 Close();
@@ -84,12 +88,16 @@ namespace Weather.EndPoint.Forms
             }
 
         }
+        #endregion
 
+        #region Close button
         private void btnCancel_Click(object sender, EventArgs e)
         {
             Close();
         }
+        #endregion
 
+        #region Event textEdit Control for number input
         private void txtMobile_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
@@ -102,5 +110,7 @@ namespace Weather.EndPoint.Forms
                 e.Handled = true;
             }
         }
+        #endregion
+
     }
 }
